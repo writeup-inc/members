@@ -11,7 +11,7 @@
 <meta property="og:description" content="営業の現場経験とAI活用の両方を知る、株式会社ライトアップのメンバー紹介。">
 <meta property="og:url" content="https://writeup-inc.github.io/members/">
 <meta property="og:image" content="https://writeup-inc.github.io/members/tsuchiya/profile-assets/curly-hair.jpg">
-<meta name="theme-color" content="#0F7B5F">
+<meta name="theme-color" content="#123B2E">
 <title>WRITEUP MEMBERS｜株式会社ライトアップ</title>
 <style>
 /* lp-base.css — 日本語LP／HTML成果物の初期CSS
@@ -72,123 +72,123 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 
 
 :root{
-  --ink:#1d2320; --sub:#6d7370; --faint:#9aa09c;
-  --green:#0F7B5F; --deep:#0D4A3A;
-  --yellow:#FFC93C; --orange:#FF7A45; --blue:#4A9DF5;
-  --pink:#FF6B9D; --purple:#9B7EDE; --mint:#4ECDA4;
-  --bg:#FFFDF8; --card:#fff; --tint:#F4F7F4; --line:#e9ece9;
-  --r:18px; --r-lg:24px;
-  --shadow:0 2px 0 rgba(29,35,32,.06);
-  --shadow-h:0 14px 30px rgba(15,123,95,.16);
+  --ink:#1A1D1B; --sub:#6B716D; --faint:#9CA19D;
+  --green:#123B2E; --green-2:#2C5A49; --terra:#C8732F;
+  --bg:#FBFAF7; --card:#fff; --tint:#F2F1EC; --line:#E4E4DF;
+  --r:10px; --r-sm:4px; --r-xs:3px;
   --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic Medium","Yu Gothic",Meiryo,-apple-system,sans-serif;
+  --num:"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{margin:0;color:var(--ink);background:var(--bg);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;}
+body{margin:0;color:var(--ink);background:var(--bg);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased;}
 a{color:inherit;text-decoration:none;}
 img{display:block;}
-.wrap{width:min(1300px,calc(100% - 48px));margin:0 auto;}
-.skip{position:absolute;left:1rem;top:-4rem;z-index:30;padding:.7rem 1rem;color:#fff;background:var(--green);border-radius:999px;}
+.wrap{width:min(1300px,calc(100% - 56px));margin:0 auto;}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:30;padding:.7rem 1rem;color:#fff;background:var(--green);border-radius:var(--r-sm);}
 .skip:focus{top:1rem;}
 
 /* ヘッダー */
-.site-head{position:sticky;top:0;z-index:12;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--line);}
-.site-head .wrap{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.brand{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:800;letter-spacing:.01em;}
-.brand i{width:26px;height:26px;border-radius:9px;background:var(--green);position:relative;flex:none;}
-.brand i::after{content:"";position:absolute;right:-4px;top:-4px;width:11px;height:11px;border-radius:50%;background:var(--yellow);}
-.nav{display:flex;gap:8px;}
-.nav a{padding:7px 14px;border-radius:999px;color:#4a524d;font-size:.85rem;font-weight:800;}
-.nav a:hover{background:var(--tint);color:var(--green);}
+.site-head{position:sticky;top:0;z-index:12;background:rgba(251,250,247,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.site-head .wrap{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:inline-flex;align-items:center;gap:11px;font-size:.9rem;font-weight:700;letter-spacing:.1em;}
+.brand i{width:18px;height:18px;background:var(--green);flex:none;position:relative;}
+.brand i::after{content:"";position:absolute;right:-5px;bottom:-5px;width:8px;height:8px;background:var(--terra);}
+.nav{display:flex;gap:26px;}
+.nav a{position:relative;color:#525853;font-size:.82rem;font-weight:700;letter-spacing:.04em;padding:4px 0;}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--green);transform:scaleX(0);transition:transform .2s ease;}
+.nav a:hover{color:var(--green);}
+.nav a:hover::after{transform:scaleX(1);}
 
-/* 告知バー */
-.notice{display:flex;align-items:center;gap:11px;margin:18px auto 0;padding:13px 20px;border-radius:999px;background:#FFF4D6;}
-.notice b{flex:none;padding:3px 11px;border-radius:999px;background:var(--yellow);color:#5a4408;font-size:12px;font-weight:800;letter-spacing:.08em;}
-.notice time{flex:none;color:#8a7530;font-size:.78rem;font-weight:700;}
-.notice span{color:#5f5426;font-size:.86rem;font-weight:700;}
+/* 告知 */
+.notice{display:flex;align-items:baseline;gap:14px;margin-top:22px;padding:14px 18px;border-left:3px solid var(--terra);background:var(--tint);}
+.notice b{flex:none;color:var(--terra);font-size:.68rem;font-weight:800;letter-spacing:.18em;}
+.notice time{flex:none;font-family:var(--num);color:var(--faint);font-size:.76rem;letter-spacing:.06em;}
+.notice span{color:#4d534f;font-size:.85rem;}
 
 /* 表紙 */
-.hero{position:relative;margin-top:22px;padding:clamp(40px,5vw,68px) 0;border-radius:var(--r-lg);
-      background:linear-gradient(135deg,#EAF7F1 0%,#F6F3E6 52%,#FDEFE4 100%);overflow:hidden;}
-.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;}
-.hero::before{width:230px;height:230px;right:-50px;top:-70px;background:var(--yellow);opacity:.5;}
-.hero::after{width:130px;height:130px;right:150px;bottom:-50px;background:var(--orange);opacity:.35;}
-.hero .inner{position:relative;z-index:1;width:min(1180px,calc(100% - 56px));margin:0 auto;}
-.hero .badge{display:inline-block;padding:6px 15px;border-radius:999px;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;}
-.hero h1{margin:16px 0 0;font-size:clamp(1.75rem,4.2vw,3rem);font-weight:800;line-height:1.4;letter-spacing:.005em;}
-.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,#FFE07A 62%);padding:0 .08em;}
-.hero p{max-width:700px;margin:16px 0 0;color:#4f5a54;font-size:.93rem;line-height:1.9;}
-.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-.hero .chips span{padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.85);font-size:.8rem;font-weight:800;}
+.hero{padding:clamp(48px,6vw,84px) 0 clamp(30px,3.4vw,44px);border-bottom:1px solid var(--line);}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;color:var(--terra);font-size:.68rem;font-weight:800;letter-spacing:.2em;}
+.hero .eyebrow::before{content:"";width:28px;height:2px;background:var(--terra);}
+.hero h1{margin:20px 0 0;font-size:clamp(1.8rem,4.2vw,3.05rem);font-weight:700;line-height:1.45;letter-spacing:.01em;}
+.hero h1 em{font-style:normal;color:var(--green);border-bottom:3px solid var(--terra);padding-bottom:.06em;}
+.hero p{max-width:720px;margin:20px 0 0;color:var(--sub);font-size:.92rem;line-height:1.95;}
+.meta{display:flex;flex-wrap:wrap;gap:0 26px;margin-top:26px;}
+.meta span{position:relative;padding-right:26px;color:#4d534f;font-size:.8rem;font-weight:700;letter-spacing:.04em;}
+.meta span::after{content:"";position:absolute;right:0;top:50%;width:1px;height:12px;margin-top:-6px;background:var(--line);}
+.meta span:last-child{padding-right:0;}
+.meta span:last-child::after{display:none;}
+.meta b{font-family:var(--num);color:var(--green);font-size:.95rem;letter-spacing:.02em;}
 
 /* セクション見出し */
-.sec-head{display:flex;align-items:center;gap:11px;padding:clamp(40px,4.6vw,60px) 0 20px;}
-.sec-head .dot{width:13px;height:13px;border-radius:50%;flex:none;}
-.sec-head h2{margin:0;font-size:1.35rem;font-weight:800;letter-spacing:.01em;}
-.sec-head .cnt{margin:0 0 0 auto;padding:4px 13px;border-radius:999px;background:var(--tint);color:var(--sub);font-size:.78rem;font-weight:800;}
+.sec-head{display:flex;align-items:center;gap:14px;padding:clamp(46px,5vw,70px) 0 24px;}
+.sec-head .bar{width:3px;height:20px;background:var(--terra);flex:none;}
+.sec-head h2{margin:0;font-size:1.22rem;font-weight:700;letter-spacing:.06em;}
+.sec-head .en{color:var(--faint);font-size:.7rem;font-weight:700;letter-spacing:.18em;}
+.sec-head .cnt{margin:0 0 0 auto;color:var(--faint);font-size:.76rem;font-weight:700;letter-spacing:.06em;}
 
-/* 特集記事 */
-.article{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,2.6vw,38px);align-items:center;
-  padding:clamp(18px,2vw,26px);border-radius:var(--r-lg);background:var(--card);box-shadow:var(--shadow);border:2px solid var(--line);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
-.article:hover{transform:translateY(-4px);box-shadow:var(--shadow-h);border-color:#cfe6dc;}
-.cover{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:var(--deep);}
+/* 特集 */
+.article{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(22px,3vw,46px);align-items:center;
+  padding:clamp(20px,2.2vw,30px);border:1px solid var(--line);border-radius:var(--r);background:var(--card);
+  transition:border-color .2s ease,box-shadow .2s ease;}
+.article:hover{border-color:#c9d3cd;box-shadow:0 10px 28px rgba(18,59,46,.09);}
+.cover{position:relative;border-radius:var(--r-sm);overflow:hidden;aspect-ratio:16/9;background:var(--green);}
 .cover img{width:100%;height:100%;object-fit:cover;}
-.cover .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,3vw,38px);}
-.cover .ov b{color:rgba(255,255,255,.8);font-size:.7rem;font-weight:800;letter-spacing:.16em;}
-.cover .ov p{margin:10px 0 0;color:#fff;font-size:clamp(1.15rem,2.3vw,1.85rem);font-weight:800;line-height:1.45;}
-.art-body .pill{display:inline-block;padding:5px 13px;border-radius:999px;background:#FFE9DC;color:#B44B18;font-size:.72rem;font-weight:800;letter-spacing:.08em;}
-.art-body h3{margin:13px 0 0;font-size:clamp(1.2rem,2vw,1.55rem);font-weight:800;line-height:1.55;}
-.art-body p{margin:11px 0 0;color:var(--sub);font-size:.88rem;line-height:1.9;}
-.byline{display:flex;align-items:center;gap:10px;margin-top:16px;}
-.byline i{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--mint));flex:none;}
-.byline span{color:var(--sub);font-size:.8rem;}
-.byline em{display:block;font-style:normal;color:var(--ink);font-weight:800;font-size:.92rem;}
-.art-go{display:inline-flex;align-items:center;gap:8px;min-height:46px;margin-top:20px;padding:0 24px;border-radius:999px;
-  background:var(--green);color:#fff;font-size:.88rem;font-weight:800;transition:background .18s ease;}
-.article:hover .art-go{background:var(--deep);}
+.cover .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,3vw,36px);}
+.cover .ov b{font-family:var(--num);color:rgba(255,255,255,.72);font-size:.7rem;font-weight:700;letter-spacing:.2em;}
+.cover .ov p{margin:12px 0 0;color:#fff;font-size:clamp(1.1rem,2.2vw,1.7rem);font-weight:700;line-height:1.5;letter-spacing:.01em;}
+.art-body .pill{display:inline-block;padding:4px 10px;border:1px solid var(--terra);border-radius:var(--r-xs);color:var(--terra);font-size:.68rem;font-weight:800;letter-spacing:.14em;}
+.art-body h3{margin:16px 0 0;font-size:clamp(1.2rem,1.9vw,1.55rem);font-weight:700;line-height:1.6;letter-spacing:.01em;}
+.art-body p{margin:14px 0 0;color:var(--sub);font-size:.87rem;line-height:1.95;}
+.byline{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line);}
+.byline i{width:34px;height:34px;border-radius:50%;background:var(--green);flex:none;}
+.byline span{color:var(--faint);font-size:.78rem;}
+.byline em{display:block;font-style:normal;color:var(--ink);font-weight:700;font-size:.9rem;letter-spacing:.02em;}
+.art-go{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:22px;padding:0 22px;border-radius:var(--r-sm);
+  background:var(--green);color:#fff;font-size:.83rem;font-weight:700;letter-spacing:.06em;transition:background .2s ease;}
+.article:hover .art-go{background:#0c2b20;}
 
 /* メンバー */
-.members{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,1.8vw,24px);}
-.member{display:block;padding:12px;border-radius:var(--r-lg);background:var(--card);border:2px solid var(--line);box-shadow:var(--shadow);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
-.member:hover{transform:translateY(-6px);box-shadow:var(--shadow-h);border-color:var(--ac);}
-.shot{position:relative;aspect-ratio:1/1;border-radius:var(--r);overflow:hidden;background:var(--tint);}
-.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;transition:transform .4s ease;}
-.member:hover .shot img{transform:scale(1.05);}
-.shot .tagno{position:absolute;z-index:2;left:10px;top:10px;min-width:28px;height:28px;padding:0 8px;border-radius:999px;
-  display:grid;place-items:center;background:var(--ac);color:#fff;font-size:.72rem;font-weight:800;}
-.veil{position:absolute;z-index:1;inset:0;display:flex;align-items:flex-end;padding:14px;opacity:0;transition:opacity .22s ease;
-  background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(13,74,58,.92));}
+.members{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2vw,28px);}
+.member{display:block;transition:transform .2s ease;}
+.member:hover{transform:translateY(-3px);}
+.shot{position:relative;aspect-ratio:1/1;border-radius:var(--r-sm);overflow:hidden;background:var(--tint);border:1px solid var(--line);}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;transition:transform .5s ease;}
+.member:hover .shot img{transform:scale(1.04);}
+.veil{position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;opacity:0;transition:opacity .22s ease;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 42%,rgba(10,40,30,.9));}
 .member:hover .veil{opacity:1;}
-.veil p{margin:0;color:#fff;font-size:.86rem;font-weight:800;line-height:1.6;}
-.m-name{margin:13px 0 0;padding:0 4px;font-size:1.1rem;font-weight:800;line-height:1.4;}
-.m-nick{margin:3px 0 0;padding:0 4px;color:var(--faint);font-size:.78rem;font-weight:700;}
-.m-dept{display:inline-block;margin:9px 4px 0;padding:4px 11px;border-radius:999px;background:var(--ac-bg);color:var(--ac-tx);font-size:12px;font-weight:800;}
-.m-role{margin:8px 0 4px;padding:0 4px;color:var(--sub);font-size:.79rem;line-height:1.6;
-  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;min-height:calc(.79rem * 1.6 * 2);}
-.member--soon{display:grid;place-items:center;padding:24px;border-radius:var(--r-lg);border:2px dashed #cfd6d1;background:#F9FBF9;
-  color:var(--sub);text-align:center;font-size:.82rem;line-height:1.8;}
-.member--soon strong{display:block;margin-bottom:6px;color:var(--green);font-size:1rem;}
-.member--soon .emo{font-size:1.6rem;line-height:1;margin-bottom:8px;}
+.veil p{margin:0;color:#fff;font-size:.83rem;font-weight:700;line-height:1.65;}
+.m-top{display:flex;align-items:baseline;gap:10px;margin-top:15px;}
+.m-no{font-family:var(--num);color:var(--faint);font-size:.72rem;font-weight:700;letter-spacing:.1em;}
+.m-name{margin:0;font-size:1.06rem;font-weight:700;line-height:1.4;letter-spacing:.02em;}
+.m-nick{margin:4px 0 0;color:var(--faint);font-size:.76rem;}
+.m-dept{display:inline-block;margin:11px 0 0;padding:3px 9px;border-radius:var(--r-xs);background:var(--d-bg);color:var(--d-tx);font-size:12px;font-weight:700;letter-spacing:.04em;}
+.m-role{margin:9px 0 0;color:var(--sub);font-size:.78rem;line-height:1.7;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;min-height:calc(.78rem * 1.7 * 2);}
+.member--soon{display:grid;place-items:center;aspect-ratio:1/1;border:1px dashed #cdd2ce;border-radius:var(--r-sm);
+  background:var(--card);color:var(--sub);text-align:center;font-size:.8rem;line-height:1.8;padding:22px;}
+.member--soon strong{display:block;margin-bottom:7px;color:var(--green);font-size:.86rem;font-weight:700;letter-spacing:.1em;}
 
 /* サービス */
-.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px clamp(14px,1.6vw,20px);}
-.svc a{display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:var(--r);background:var(--card);
-  border:2px solid var(--line);box-shadow:var(--shadow);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;}
-.svc a:hover{transform:translateX(3px);border-color:var(--ac);box-shadow:var(--shadow-h);}
-.svc .no{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--ac);color:#fff;font-size:.82rem;font-weight:800;}
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,52px);}
+.svc a{display:flex;align-items:center;gap:16px;padding:17px 6px;border-bottom:1px solid var(--line);transition:padding-left .18s ease;}
+.svc a:hover{padding-left:12px;}
+.svc .no{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:var(--r-xs);background:var(--tint);
+  font-family:var(--num);color:var(--green);font-size:.76rem;font-weight:700;letter-spacing:.04em;}
+.svc a:hover .no{background:var(--green);color:#fff;}
 .svc .tx{display:block;min-width:0;flex:1;}
-.svc .nm{display:block;font-size:.96rem;font-weight:800;line-height:1.45;}
-.svc .ds{display:block;margin-top:2px;color:var(--sub);font-size:.79rem;line-height:1.55;}
-.svc .ow{flex:none;padding:3px 11px;border-radius:999px;background:var(--tint);color:#4a524d;font-size:12px;font-weight:800;white-space:nowrap;}
-.svc .ar{flex:none;color:var(--faint);font-weight:800;}
-.svc a:hover .ar{color:var(--ac);}
-.svc-all{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:20px;padding:20px 26px;border-radius:var(--r-lg);
-  background:linear-gradient(120deg,var(--green),#149170);color:#fff;font-size:.95rem;font-weight:800;transition:transform .16s ease;}
-.svc-all:hover{transform:translateY(-3px);}
+.svc .nm{display:block;font-size:.93rem;font-weight:700;letter-spacing:.02em;line-height:1.45;}
+.svc .ds{display:block;margin-top:3px;color:var(--sub);font-size:.78rem;line-height:1.6;}
+.svc .ow{flex:none;color:var(--faint);font-size:12px;font-weight:700;letter-spacing:.04em;white-space:nowrap;}
+.svc .ar{flex:none;color:var(--faint);}
+.svc a:hover .ar{color:var(--terra);}
+.svc-all{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:26px;padding:22px 26px;border-radius:var(--r);
+  background:var(--green);color:#fff;font-size:.9rem;font-weight:700;letter-spacing:.03em;transition:background .2s ease;}
+.svc-all:hover{background:#0c2b20;}
+.svc-all span:last-child{font-family:var(--num);letter-spacing:.1em;font-size:.82rem;}
 
-footer{margin-top:clamp(46px,6vw,76px);border-top:2px solid var(--line);padding:26px 0 40px;color:var(--faint);font-size:.78rem;}
+footer{margin-top:clamp(50px,6vw,84px);border-top:1px solid var(--line);padding:28px 0 44px;color:var(--faint);font-size:.76rem;letter-spacing:.03em;}
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
 
 .m-name,.m-nick,.m-role,.svc .nm,.svc .ds,.member--soon p,.art-body p,.cover .ov p,.notice span,.hero p{
@@ -202,25 +202,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
 @media (max-width:860px){
   .wrap{width:min(1300px,calc(100% - 32px));}
   .nav{display:none;}
-  .article{grid-template-columns:1fr;gap:16px;align-items:start;}
+  .article{grid-template-columns:1fr;gap:20px;align-items:start;}
   .svc{grid-template-columns:1fr;}
-  .hero .inner{width:calc(100% - 40px);}
 }
 @media (max-width:560px){
-  .members{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-  .member{padding:9px;}
+  .members{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;}
   .veil{display:none;}
-  .m-name{font-size:.96rem;}
-  .m-role{font-size:.74rem;-webkit-line-clamp:3;min-height:calc(.74rem * 1.6 * 3);}
-  .notice{flex-wrap:wrap;gap:7px 10px;border-radius:var(--r);}
-  /* 「経営コンサルティング局」がチップ内で2行に割れるのを防ぐ */
-  .m-dept{font-size:11px;padding:3px 9px;max-width:calc(100% - 8px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .hero .badge{font-size:.63rem;letter-spacing:.08em;padding:5px 12px;}
-  .hero .chips span{font-size:.74rem;padding:5px 11px;}
-  .sec-head h2{font-size:1.15rem;}
-  .svc a{padding:13px 14px;gap:11px;}
-  .svc .ow{display:none;}
-  .svc-all{padding:17px 20px;font-size:.86rem;}
+  .m-name{font-size:.95rem;}
+  .m-role{font-size:.74rem;-webkit-line-clamp:3;min-height:calc(.74rem * 1.7 * 3);}
+  .m-dept{font-size:11px;padding:3px 8px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .notice{flex-wrap:wrap;gap:6px 12px;}
+  .meta{gap:0 18px;}
+  .meta span{padding-right:18px;font-size:.75rem;}
+  .sec-head h2{font-size:1.08rem;}
+  .sec-head .en{display:none;}
+  .svc-all{padding:18px 20px;font-size:.84rem;}
 }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} *,*::before,*::after{transition-duration:.01ms !important;} }
 </style>
@@ -243,28 +239,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
       <b>UPDATE</b><time datetime="2026-09-12">2026.09.12</time>
       <span>メンバー7名のプロフィールを更新しました。</span>
     </div>
-
-    <section class="hero">
-      <div class="inner">
-        <span class="badge">PEOPLE WHO BUILD THE NEXT STEP</span>
-        <h1>AIを、現場で<em>使える一歩</em>へ。</h1>
-        <p>営業の現場経験とAI活用の両方を知る、株式会社ライトアップのメンバー紹介です。担当者の経験や得意領域、仕事の外にある人柄もご覧いただけます。</p>
-        <div class="chips"><span>🙌 7名を掲載中</span><span>📣 毎月の特集あり</span><span>🧩 主要サービス11件</span></div>
-      </div>
-    </section>
   </div>
+
+  <section class="wrap hero">
+    <p class="eyebrow">PEOPLE WHO BUILD THE NEXT STEP</p>
+    <h1>AIを、現場で<em>使える一歩</em>へ。</h1>
+    <p>営業の現場経験とAI活用の両方を知る、株式会社ライトアップのメンバー紹介です。担当者の経験や得意領域、仕事の外にある人柄もご覧いただけます。</p>
+    <div class="meta">
+      <span><b>7</b> 名を掲載</span>
+      <span>特集は <b>毎月</b> 更新</span>
+      <span>主要サービス <b>11</b> 件</span>
+    </div>
+  </section>
 
   <section class="wrap" id="interview" aria-labelledby="interview-title">
     <div class="sec-head">
-      <span class="dot" style="background:var(--orange)" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
       <h2 id="interview-title">今月の特集</h2>
+      <span class="en">FEATURE</span>
       <p class="cnt">毎月更新</p>
     </div>
     <a class="article" href="interview/">
       <div class="cover">
         <img src="assets/interview-cover.svg" width="1200" height="675" alt="">
         <span class="ov">
-          <b>THIS MONTH ／ 2026.09</b>
+          <b>THIS MONTH / 2026.09</b>
           <p>今月の弊社AI事業、<br>注目ポイントとは。</p>
         </span>
       </div>
@@ -283,112 +282,114 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
 
   <section class="wrap" id="members" aria-labelledby="members-title">
     <div class="sec-head">
-      <span class="dot" style="background:var(--blue)" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
       <h2 id="members-title">メンバー</h2>
+      <span class="en">MEMBERS</span>
       <p class="cnt">7名／順次追加</p>
     </div>
     <div class="members">
 
-      <a class="member" href="tsuchiya/" style="--ac:#FF7A45;--ac-bg:#FFECE2;--ac-tx:#B44B18;">
-        <div class="shot"><span class="tagno">01</span>
+      <a class="member" href="tsuchiya/" style="--d-bg:#E8EFEB;--d-tx:#2C5A49;">
+        <div class="shot">
           <img src="tsuchiya/profile-assets/curly-hair.jpg" width="741" height="1000" alt="正面を向いて笑う土屋慧介" loading="lazy">
           <div class="veil"><p>髪は天然。営業は設計。AIは本気。</p></div>
         </div>
-        <p class="m-name">土屋 慧介</p>
+        <div class="m-top"><span class="m-no">01</span><p class="m-name">土屋 慧介</p></div>
         <p class="m-nick">つっちー</p>
         <span class="m-dept">第一営業部</span>
         <p class="m-role">AI活用アドバイザー ／ 売上2倍担当</p>
       </a>
 
-      <a class="member" href="enomoto/" style="--ac:#4A9DF5;--ac-bg:#E6F1FE;--ac-tx:#1A5FAE;">
-        <div class="shot"><span class="tagno">02</span>
+      <a class="member" href="enomoto/" style="--d-bg:#E8EFEB;--d-tx:#2C5A49;">
+        <div class="shot">
           <img src="enomoto/profile-assets/main.jpg" width="940" height="1600" alt="スーツ姿で正面を向く榎本翔太" loading="lazy">
           <div class="veil"><p>1年かけて、御社の売上を2倍に。</p></div>
         </div>
-        <p class="m-name">榎本 翔太</p>
+        <div class="m-top"><span class="m-no">02</span><p class="m-name">榎本 翔太</p></div>
         <p class="m-nick">もっさん</p>
         <span class="m-dept">第一営業部</span>
         <p class="m-role">AI活用アドバイザー ／ 売上2倍担当</p>
       </a>
 
-      <a class="member" href="sato/" style="--ac:#E0A800;--ac-bg:#FFF5D6;--ac-tx:#8A6A00;">
-        <div class="shot"><span class="tagno">03</span>
+      <a class="member" href="sato/" style="--d-bg:#F7EDE3;--d-tx:#A25A1E;">
+        <div class="shot">
           <img src="sato/profile-assets/main.jpg" width="1200" height="1600" alt="「ペンションすばる」の看板を指さす佐藤昴" loading="lazy">
           <div class="veil"><p>「お金がない」を、AI化しない理由にさせない。</p></div>
         </div>
-        <p class="m-name">佐藤 昴</p>
+        <div class="m-top"><span class="m-no">03</span><p class="m-name">佐藤 昴</p></div>
         <p class="m-nick">すばる</p>
         <span class="m-dept">経営コンサルティング局</span>
         <p class="m-role">Jマッチエンジン ／ OEM提供 担当</p>
       </a>
 
-      <a class="member" href="tamura/" style="--ac:#4ECDA4;--ac-bg:#E3F8F0;--ac-tx:#12775A;">
-        <div class="shot"><span class="tagno">04</span>
+      <a class="member" href="tamura/" style="--d-bg:#F7EDE3;--d-tx:#A25A1E;">
+        <div class="shot">
           <img src="assets/avatar-placeholder.svg" width="512" height="512" alt="田村大輔（写真は準備中のため仮画像）" loading="lazy">
           <div class="veil"><p>ご縁を、一度きりで終わらせません。</p></div>
         </div>
-        <p class="m-name">田村 大輔</p>
+        <div class="m-top"><span class="m-no">04</span><p class="m-name">田村 大輔</p></div>
         <p class="m-nick">たむら だいすけ</p>
         <span class="m-dept">経営コンサルティング局</span>
         <p class="m-role">Jマッチエンジン ／ OEM提供 担当</p>
       </a>
 
-      <a class="member" href="matsui/" style="--ac:#FF6B9D;--ac-bg:#FFE9F1;--ac-tx:#B52A5D;">
-        <div class="shot"><span class="tagno">05</span>
+      <a class="member" href="matsui/" style="--d-bg:#EAEEF3;--d-tx:#3F5A78;">
+        <div class="shot">
           <img src="matsui/profile-assets/main.jpg" width="1600" height="1200" alt="旅先の道で両手を広げる松井友美" loading="lazy">
           <div class="veil"><p>AIだけでは、温度感までは届きません。</p></div>
         </div>
-        <p class="m-name">松井 友美</p>
+        <div class="m-top"><span class="m-no">05</span><p class="m-name">松井 友美</p></div>
         <p class="m-nick">まっちゃん</p>
         <span class="m-dept">第2営業部</span>
         <p class="m-role">第2営業部 リーダー ／ パートナー様の伴走支援</p>
       </a>
 
-      <a class="member" href="eda/" style="--ac:#9B7EDE;--ac-bg:#F0EAFC;--ac-tx:#61439F;">
-        <div class="shot"><span class="tagno">06</span>
+      <a class="member" href="eda/" style="--d-bg:#EAEEF3;--d-tx:#3F5A78;">
+        <div class="shot">
           <img src="eda/profile-assets/main.jpg" width="1108" height="1477" alt="古い車両の前に立つ江田梨奈" loading="lazy">
           <div class="veil"><p>AIに詳しくないところから始める不安は、よく分かります。</p></div>
         </div>
-        <p class="m-name">江田 梨奈</p>
+        <div class="m-top"><span class="m-no">06</span><p class="m-name">江田 梨奈</p></div>
         <p class="m-nick">えだっち</p>
         <span class="m-dept">第2営業部</span>
         <p class="m-role">パートナー様の募集 ／ AIOマスター OEM</p>
       </a>
 
-      <a class="member" href="furihata/" style="--ac:#0F7B5F;--ac-bg:#E3F3ED;--ac-tx:#0B5C46;">
-        <div class="shot"><span class="tagno">07</span>
+      <a class="member" href="furihata/" style="--d-bg:#EAEEF3;--d-tx:#3F5A78;">
+        <div class="shot">
           <img src="furihata/profile-assets/main.png" width="739" height="933" alt="スーツ姿で正面を向く降旗一也" loading="lazy">
           <div class="veil"><p>営業と、ツールづくりの間。そこをやる人になります。</p></div>
         </div>
-        <p class="m-name">降旗 一也</p>
+        <div class="m-top"><span class="m-no">07</span><p class="m-name">降旗 一也</p></div>
         <p class="m-nick">ふりはた かずや</p>
         <span class="m-dept">第2営業部</span>
         <p class="m-role">代理店・パートナー営業</p>
       </a>
 
-      <div class="member--soon"><p><span class="emo" aria-hidden="true">✨</span><strong>まもなく増えます</strong>メンバーを順次追加します。</p></div>
+      <div class="member--soon"><p><strong>COMING SOON</strong>各部署のメンバーを<br>順次追加します。</p></div>
 
     </div>
   </section>
 
   <section class="wrap" id="services" aria-labelledby="services-title">
     <div class="sec-head">
-      <span class="dot" style="background:var(--purple)" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
       <h2 id="services-title">主要サービス</h2>
+      <span class="en">SERVICES</span>
       <p class="cnt">11件</p>
     </div>
     <div class="svc">
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#FF7A45"><span class="no">01</span><span class="tx"><span class="nm">AIOマスター</span><span class="ds">AI検索で指名される状態をつくる</span></span><span class="ow">江田</span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#4A9DF5"><span class="no">02</span><span class="tx"><span class="nm">Lシンク</span><span class="ds">LINEでの一次対応をAIが担う</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#FF6B9D"><span class="no">03</span><span class="tx"><span class="nm">ソーシャルマスター</span><span class="ds">SNSの発信を自動で回す</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#9B7EDE"><span class="no">04</span><span class="tx"><span class="nm">受電AI</span><span class="ds">電話の取りこぼしを防ぐ</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#4ECDA4"><span class="no">05</span><span class="tx"><span class="nm">つばめリード</span><span class="ds">新しい接点を継続して集める</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#E0A800"><span class="no">06</span><span class="tx"><span class="nm">つばめリファラル</span><span class="ds">紹介の流れを収益につなげる</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#0F7B5F"><span class="no">07</span><span class="tx"><span class="nm">名刺LINEエージェント</span><span class="ds">交換した名刺を接点に変える</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#FF7A45"><span class="no">08</span><span class="tx"><span class="nm">Lマッチ</span><span class="ds">問い合わせと担当をつなぐ</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#4A9DF5"><span class="no">09</span><span class="tx"><span class="nm">ちりつもAI</span><span class="ds">小さな入口から接点をためる</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#FF6B9D"><span class="no">10</span><span class="tx"><span class="nm">AIバード</span><span class="ds">導入から運用まで伴走する</span></span><span class="ar" aria-hidden="true">›</span></a>
-      <a href="https://writeup-inc.github.io/saas/" style="--ac:#9B7EDE"><span class="no">11</span><span class="tx"><span class="nm">士業AI実務パック</span><span class="ds">士業の実務をAIで組み立てる</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">01</span><span class="tx"><span class="nm">AIOマスター</span><span class="ds">AI検索で指名される状態をつくる</span></span><span class="ow">江田</span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">02</span><span class="tx"><span class="nm">Lシンク</span><span class="ds">LINEでの一次対応をAIが担う</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">03</span><span class="tx"><span class="nm">ソーシャルマスター</span><span class="ds">SNSの発信を自動で回す</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">04</span><span class="tx"><span class="nm">受電AI</span><span class="ds">電話の取りこぼしを防ぐ</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">05</span><span class="tx"><span class="nm">つばめリード</span><span class="ds">新しい接点を継続して集める</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">06</span><span class="tx"><span class="nm">つばめリファラル</span><span class="ds">紹介の流れを収益につなげる</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">07</span><span class="tx"><span class="nm">名刺LINEエージェント</span><span class="ds">交換した名刺を接点に変える</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">08</span><span class="tx"><span class="nm">Lマッチ</span><span class="ds">問い合わせと担当をつなぐ</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">09</span><span class="tx"><span class="nm">ちりつもAI</span><span class="ds">小さな入口から接点をためる</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">10</span><span class="tx"><span class="nm">AIバード</span><span class="ds">導入から運用まで伴走する</span></span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">11</span><span class="tx"><span class="nm">士業AI実務パック</span><span class="ds">士業の実務をAIで組み立てる</span></span><span class="ar" aria-hidden="true">→</span></a>
     </div>
     <a class="svc-all" href="https://writeup-inc.github.io/saas/">
       <span>サービスの一覧と新着はこちら</span><span>WRITEUP / SaaS →</span>
