@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="写真準備中のプレースホルダー">
+  <defs>
+    <clipPath id="sq"><rect width="512" height="512"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD98A"/><stop offset="1" stop-color="#FFB25C"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <circle cx="92" cy="86" r="46" fill="#fff" opacity=".28"/>
+    <circle cx="438" cy="150" r="26" fill="#fff" opacity=".22"/>
+    <circle cx="60" cy="330" r="18" fill="#fff" opacity=".22"/>
+    <!-- 体 -->
+      <path d="M116 512c0-82 63-140 140-140s140 58 140 140z" fill="#1F7A5C"/>
+    <!-- 首 -->
+    <rect x="228" y="300" width="56" height="70" rx="28" fill="#F6C9A4"/>
+    <!-- 頭 -->
+    <circle cx="256" cy="236" r="96" fill="#FBD9BB"/>
+    <!-- 髪 -->
+    <path d="M160 232a96 96 0 0 1 192 0c0 10-8 14-14 8-26-24-52-34-82-34s-56 10-82 34c-6 6-14 2-14-8z" fill="#3A2E28"/>
+    <!-- 目 -->
+    <circle cx="222" cy="240" r="9" fill="#3A2E28"/>
+    <circle cx="290" cy="240" r="9" fill="#3A2E28"/>
+    <!-- ほお -->
+    <circle cx="200" cy="268" r="14" fill="#FF9B8A" opacity=".55"/>
+    <circle cx="312" cy="268" r="14" fill="#FF9B8A" opacity=".55"/>
+    <!-- 口 -->
+    <path d="M236 276q20 18 40 0" stroke="#3A2E28" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

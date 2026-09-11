@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="特集記事のカバー画像">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F7B5F"/><stop offset=".55" stop-color="#12694F"/><stop offset="1" stop-color="#0D4A3A"/>
+    </linearGradient>
+    <clipPath id="c"><rect width="1200" height="675"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="1200" height="675" fill="url(#g)"/>
+    <circle cx="1040" cy="120" r="190" fill="#FFC93C" opacity=".9"/>
+    <circle cx="1040" cy="120" r="120" fill="#FF7A45" opacity=".85"/>
+    <circle cx="150" cy="600" r="140" fill="#4ECDA4" opacity=".35"/>
+    <path d="M0 520q150-80 300 0t300 0 300 0 300 0v155H0z" fill="#fff" opacity=".07"/>
+    <path d="M0 570q150-80 300 0t300 0 300 0 300 0v105H0z" fill="#fff" opacity=".07"/>
+    <g fill="#FFC93C">
+      <circle cx="120" cy="120" r="9"/><circle cx="170" cy="150" r="6"/><circle cx="90" cy="180" r="5"/>
+    </g>
+    <g fill="#fff" opacity=".55">
+      <circle cx="640" cy="90" r="6"/><circle cx="700" cy="130" r="4"/><circle cx="580" cy="150" r="4"/>
+    </g>
+    <path d="M1035 470l17 35 38 6-27 27 7 38-35-18-35 18 7-38-27-27 38-6z" fill="#FFC93C" opacity=".95"/>
+  </g>
+</svg>
