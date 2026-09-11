@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#173b2d">
+<title>ただいま生成中｜代表 白石に聞く</title>
+<style>
+/* lp-base.css — 日本語LP／HTML成果物の初期CSS
+ *
+ * 品質台帳（~/Documents/Codex/loop-engineering-memory/events.jsonl）で
+ * 再発が確認された表示欠陥を、指摘ではなく初期値で潰すためのファイル。
+ * 対応する欠陥ID:
+ *   japanese-heading-midword-wrap（見出しが単語途中で改行）11回
+ *   mobile-fv-headline-wrap（モバイルFVの見出し改行）3回
+ *   mobile-fixed-cta-overlap（固定CTAが本文を隠す）3回
+ *   meaningful-small-text-under-readable-size（意味のある文字が可読サイズ未満）5回
+ *
+ * 使い方: HTMLの<style>先頭にこの内容を貼る。色・書体・余白は各LPで上書きしてよいが、
+ * 下の「改行制御」「最小文字サイズ」「固定CTAの逃げ」の3ブロックは消さないこと。
+ */
+
+/* ── 改行制御 ─────────────────────────────────────────────
+ * 日本語は単語区切りが無いため、既定のままだと文節の途中で折り返す。
+ * auto-phrase は文節単位で折る（Chrome 119+）。非対応環境は strict で逃がす。 */
+h1, h2, h3, h4, h5,
+.lead, .catch, .hero__title, [data-keep-phrase] {
+  word-break: auto-phrase;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+@supports not (word-break: auto-phrase) {
+  h1, h2, h3, h4, h5,
+  .lead, .catch, .hero__title, [data-keep-phrase] {
+    word-break: normal;
+  }
+}
+/* 明示的に折りたくない語の途中で切られたら、その語を <span class="nobr"> で包む */
+.nobr { white-space: nowrap; }
+
+/* ── 最小文字サイズ ───────────────────────────────────────
+ * 判断材料になる文字は12px未満にしない。注記・免責のみ .note を許容。 */
+:root { --fs-min: 12px; --fs-body: 16px; }
+body { font-size: var(--fs-body); line-height: 1.8; }
+small, .note, figcaption { font-size: var(--fs-min); line-height: 1.7; }
+
+/* ── ファーストビューの見出し ─────────────────────────────
+ * 固定pxだと狭い画面で必ず折り返す。clamp で画面幅に追従させる。 */
+h1, .hero__title { font-size: clamp(1.55rem, 5.2vw, 3.25rem); line-height: 1.35; }
+h2 { font-size: clamp(1.3rem, 3.6vw, 2.1rem); line-height: 1.45; }
+
+/* ── 固定CTAの逃げ ────────────────────────────────────────
+ * 画面下に固定CTAを置くページは、この変数を実測の高さに書き換える。
+ * 置かないページはそのままでよい（0のまま）。 */
+:root { --fixed-cta-h: 0px; }
+body { padding-bottom: calc(var(--fixed-cta-h) + env(safe-area-inset-bottom, 0px)); }
+
+/* ── 横はみ出しの予防 ─────────────────────────────────────
+ * flex/grid の子は既定で min-width:auto のため、長い語で親を押し広げる。 */
+*, *::before, *::after { box-sizing: border-box; }
+img, svg, video, canvas, iframe { max-width: 100%; height: auto; }
+main > *, section > *, .grid > *, .flex > * { min-width: 0; }
+pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
+
+
+:root{
+  --ink:#1b1b1b; --sub:#7c7c7c; --faint:#a3a3a3;
+  --green:#173b2d; --deep:#0D281C; --gold-d:#8a6d31;
+  --bg:#fff; --tint:#f7f7f5; --line:#ececea; --r:8px;
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic Medium","Yu Gothic",Meiryo,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;color:var(--ink);background:var(--bg);
+     font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{width:min(680px,calc(100% - 40px));margin:0 auto;}
+.wrap--wide{width:min(1060px,calc(100% - 40px));}
+
+.site-head{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);}
+.site-head .wrap{min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:inline-flex;align-items:center;gap:9px;font-size:.95rem;font-weight:700;}
+.brand i{width:22px;height:22px;border-radius:6px;background:var(--green);}
+.back{color:#555;font-size:.83rem;font-weight:700;}
+.back:hover{color:var(--green);}
+
+main{flex:1;padding:clamp(26px,4vw,44px) 0 clamp(40px,6vw,72px);}
+
+.thumb{aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;
+  background:linear-gradient(135deg,var(--deep) 0%,#20402e 55%,#2c5540 100%);
+  display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,3vw,30px);}
+.thumb .th-tag{color:rgba(255,255,255,.66);font-size:.68rem;font-weight:800;letter-spacing:.14em;}
+.thumb .th-ttl{color:#fff;font-size:clamp(1.15rem,3.4vw,1.9rem);font-weight:700;line-height:1.5;}
+.thumb .th-ft{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:.72rem;}
+.thumb .th-ft i{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.22);flex:none;}
+
+h1{margin:clamp(20px,3vw,30px) 0 0;font-size:clamp(1.35rem,3.6vw,1.95rem);font-weight:700;line-height:1.55;}
+.byline{display:flex;align-items:center;gap:9px;margin-top:14px;padding-bottom:20px;border-bottom:1px solid var(--line);}
+.byline i{width:30px;height:30px;border-radius:50%;background:var(--green);flex:none;}
+.byline span{color:var(--sub);font-size:.8rem;}
+.byline em{font-style:normal;color:#3d3d3d;font-weight:700;}
+
+.status{display:flex;align-items:center;gap:12px;margin:24px 0 0;padding:18px 20px;border-radius:var(--r);background:var(--tint);}
+.dots{display:inline-flex;gap:5px;flex:none;}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--green);opacity:.25;animation:blink 1.25s infinite ease-in-out;}
+.dots i:nth-child(2){animation-delay:.18s;}
+.dots i:nth-child(3){animation-delay:.36s;}
+@keyframes blink{0%,70%,100%{opacity:.25;transform:translateY(0);}35%{opacity:1;transform:translateY(-3px);}}
+.status p{margin:0;font-size:.92rem;font-weight:700;}
+
+/* 本文のプレースホルダー（生成中であることを形で示す） */
+.skeleton{margin:26px 0 0;display:flex;flex-direction:column;gap:11px;}
+.skeleton span{height:13px;border-radius:4px;background:linear-gradient(90deg,var(--tint) 25%,#efefec 50%,var(--tint) 75%);
+  background-size:200% 100%;animation:shim 1.7s infinite linear;}
+.skeleton span:nth-child(3){width:82%;}
+.skeleton span:nth-child(6){width:64%;}
+@keyframes shim{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+
+.note{margin:26px 0 0;padding-top:22px;border-top:1px solid var(--line);color:var(--sub);font-size:.85rem;line-height:1.95;}
+.note b{display:block;margin-bottom:5px;color:#4a4a4a;font-size:.7rem;font-weight:800;letter-spacing:.12em;}
+.go{display:inline-flex;align-items:center;gap:7px;min-height:42px;margin-top:24px;padding:0 20px;border-radius:999px;
+    background:var(--green);color:#fff;font-size:.8rem;font-weight:700;}
+.go:hover{background:var(--deep);}
+
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--faint);font-size:.76rem;}
+h1,.note,.thumb .th-ttl{word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere;}
+@supports not (word-break:auto-phrase){ h1,.note,.thumb .th-ttl{word-break:normal;} }
+@media (max-width:420px){
+  .brand{font-size:.82rem;gap:7px;white-space:nowrap;}
+  .brand i{width:19px;height:19px;}
+  .back{font-size:.78rem;white-space:nowrap;}
+  .bk-long{display:none;}
+}
+@media (prefers-reduced-motion:reduce){ .dots i{animation:none;opacity:.5;} .skeleton span{animation:none;} }
+</style>
+</head>
+<body>
+<header class="site-head"><div class="wrap wrap--wide">
+  <a class="brand" href="../"><i aria-hidden="true"></i>WRITEUP MEMBERS</a>
+  <a class="back" href="../">←<span class="bk-long"> メンバー</span>一覧へ</a>
+</div></header>
+
+<main><div class="wrap">
+  <div class="thumb">
+    <span class="th-tag">THIS MONTH ／ 2026.09</span>
+    <span class="th-ttl">今月の弊社AI事業、<br>注目ポイントとは。</span>
+    <span class="th-ft"><i aria-hidden="true"></i>代表 白石に聞く</span>
+  </div>
+
+  <h1>今月の弊社AI事業、注目ポイントとは。</h1>
+  <div class="byline">
+    <i aria-hidden="true"></i>
+    <span><em>白石 崇</em> ／ 代表取締役　2026.09</span>
+  </div>
+
+  <div class="status">
+    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <p>ただいま生成中です。</p>
+  </div>
+
+  <div class="skeleton" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="note">
+    <b>ABOUT</b>
+    この記事は、今月の現場の動きと代表へのインタビューをもとに準備しています。公開まで、いましばらくお待ちください。
+  </div>
+
+  <a class="go" href="../">メンバー一覧へ戻る <span aria-hidden="true">→</span></a>
+</div></main>
+
+<footer><div class="wrap wrap--wide">© Writeup Inc. / Members</div></footer>
+</body>
+</html>

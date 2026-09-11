@@ -1,177 +1,354 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="株式会社ライトアップのAIコンサルタントメンバー紹介。営業の現場経験とAI活用の両方を知る担当者を紹介します。">
-  <link rel="canonical" href="https://writeup-inc.github.io/members/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AI CONSULTANT MEMBERS｜株式会社ライトアップ">
-  <meta property="og:description" content="営業の現場経験とAI活用の両方を知る、株式会社ライトアップのメンバー紹介。">
-  <meta property="og:url" content="https://writeup-inc.github.io/members/">
-  <meta property="og:image" content="https://writeup-inc.github.io/members/tsuchiya/profile-assets/curly-hair.jpg">
-  <meta name="theme-color" content="#173b2d">
-  <title>AI CONSULTANT MEMBERS｜株式会社ライトアップ</title>
-  <style>
-    :root { --ink:#10261b; --green:#173b2d; --paper:#f3efe7; --sand:#e5dccb; --gold:#b89553; --white:#fffdf8; --line:rgba(16,38,27,.18); --sans:"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,Meiryo,sans-serif; --serif:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); line-height:1.65; }
-    a { color:inherit; }
-    .skip { position:absolute; left:1rem; top:-4rem; z-index:10; padding:.7rem 1rem; color:#fff; background:var(--green); }
-    .skip:focus { top:1rem; }
-    .wrap { width:min(1200px, calc(100% - 40px)); margin:0 auto; }
-    .site-head { border-bottom:1px solid var(--line); background:rgba(255,253,248,.9); }
-    .site-head .wrap { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { font-size:.75rem; font-weight:800; letter-spacing:.16em; text-decoration:none; }
-    .division { margin:0; color:#506054; font-size:.78rem; letter-spacing:.08em; }
-    .hero { padding:clamp(64px,10vw,130px) 0 72px; border-bottom:1px solid var(--line); }
-    .eyebrow { margin:0 0 16px; color:#927334; font-size:.76rem; font-weight:800; letter-spacing:.18em; }
-    h1 { max-width:850px; margin:0; font-family:var(--serif); font-size:clamp(2.8rem,8vw,6.5rem); font-weight:600; letter-spacing:-.06em; line-height:.95; }
-    .hero p:last-child { max-width:670px; margin:28px 0 0; font-size:clamp(1rem,1.8vw,1.22rem); }
-    .list-head { display:flex; justify-content:space-between; align-items:end; gap:24px; padding:48px 0 22px; }
-    .list-head h2 { margin:0; font-size:clamp(1.6rem,3vw,2.4rem); letter-spacing:.02em; }
-    .count { margin:0; color:#766f64; font-size:.85rem; letter-spacing:.12em; }
-    .members { display:grid; grid-template-columns:repeat(12, 1fr); gap:24px; padding-bottom:76px; }
-    .member-card { grid-column:span 12; display:grid; grid-template-columns:minmax(220px, .82fr) minmax(0, 1.18fr); overflow:hidden; border:1px solid var(--line); background:var(--white); text-decoration:none; transition:transform .2s ease, box-shadow .2s ease; }
-    .member-card:hover, .member-card:focus-visible { transform:translateY(-4px); box-shadow:0 18px 36px rgba(23,59,45,.12); outline:none; }
-    .portrait { min-height:420px; overflow:hidden; background:#d7d3ca; }
-    .portrait img { width:100%; height:100%; object-fit:cover; object-position:50% 26%; transition:transform .5s ease; }
-    .member-card:hover img { transform:scale(1.03); }
-    .copy { display:flex; min-height:420px; flex-direction:column; padding:clamp(26px,4vw,52px); }
-    .member-no { margin:0; color:#927334; font-size:.75rem; font-weight:800; letter-spacing:.18em; }
-    .role { margin:18px 0 0; color:#456555; font-size:.9rem; font-weight:700; }
-    h3 { margin:12px 0 0; font-family:var(--serif); font-size:clamp(2.2rem,5vw,4.5rem); font-weight:600; letter-spacing:-.05em; line-height:1; }
-    .nick { margin:10px 0 0; font-size:1.02rem; font-weight:700; }
-    .catch { max-width:500px; margin:24px 0 0; font-size:clamp(1.04rem,2vw,1.35rem); font-weight:700; line-height:1.65; }
-    .meta { display:flex; flex-wrap:wrap; gap:8px 14px; margin:26px 0 0; padding:18px 0 0; border-top:1px solid var(--line); color:#526055; font-size:.88rem; }
-    .meta span { white-space:nowrap; }
-    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:auto; padding-top:28px; }
-    .links span { display:inline-flex; align-items:center; min-height:38px; padding:0 14px; border:1px solid var(--green); font-size:.82rem; font-weight:800; letter-spacing:.06em; }
-    .links span:last-child { color:#fff; background:var(--green); }
-    .portrait--mono { display:grid; place-items:center; background:linear-gradient(128deg,#0D281C,#213E2C); }
-    .portrait--mono span { font-family:var(--serif); font-size:clamp(2.4rem,5vw,4rem); color:rgba(255,255,255,.9); letter-spacing:.1em; }
-    .future { grid-column:span 12; display:grid; place-items:center; min-height:156px; border:1px dashed rgba(16,38,27,.35); color:#697368; text-align:center; }
-    .future p { margin:0; font-size:.93rem; }
-    .future strong { display:block; margin-bottom:4px; color:var(--ink); font-size:1rem; }
-    footer { border-top:1px solid var(--line); padding:24px 0 34px; color:#657064; font-size:.76rem; }
-    @media (max-width:680px) { .wrap { width:min(100% - 32px, 1200px); } .site-head .wrap { min-height:60px; } .division { display:none; } .hero { padding-bottom:50px; } .list-head { align-items:start; flex-direction:column; gap:6px; padding-top:32px; } .member-card { grid-template-columns:1fr; } .portrait { min-height:330px; } .copy { min-height:0; } }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition-duration:.01ms !important; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="株式会社ライトアップのメンバー紹介。営業の現場経験とAI活用の両方を知る担当者と、代表インタビュー、主要サービスをまとめています。">
+<link rel="canonical" href="https://writeup-inc.github.io/members/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WRITEUP MEMBERS｜株式会社ライトアップ">
+<meta property="og:description" content="営業の現場経験とAI活用の両方を知る、株式会社ライトアップのメンバー紹介。">
+<meta property="og:url" content="https://writeup-inc.github.io/members/">
+<meta property="og:image" content="https://writeup-inc.github.io/members/tsuchiya/profile-assets/curly-hair.jpg">
+<meta name="theme-color" content="#173b2d">
+<title>WRITEUP MEMBERS｜株式会社ライトアップ</title>
+<style>
+/* lp-base.css — 日本語LP／HTML成果物の初期CSS
+ *
+ * 品質台帳（~/Documents/Codex/loop-engineering-memory/events.jsonl）で
+ * 再発が確認された表示欠陥を、指摘ではなく初期値で潰すためのファイル。
+ * 対応する欠陥ID:
+ *   japanese-heading-midword-wrap（見出しが単語途中で改行）11回
+ *   mobile-fv-headline-wrap（モバイルFVの見出し改行）3回
+ *   mobile-fixed-cta-overlap（固定CTAが本文を隠す）3回
+ *   meaningful-small-text-under-readable-size（意味のある文字が可読サイズ未満）5回
+ *
+ * 使い方: HTMLの<style>先頭にこの内容を貼る。色・書体・余白は各LPで上書きしてよいが、
+ * 下の「改行制御」「最小文字サイズ」「固定CTAの逃げ」の3ブロックは消さないこと。
+ */
+
+/* ── 改行制御 ─────────────────────────────────────────────
+ * 日本語は単語区切りが無いため、既定のままだと文節の途中で折り返す。
+ * auto-phrase は文節単位で折る（Chrome 119+）。非対応環境は strict で逃がす。 */
+h1, h2, h3, h4, h5,
+.lead, .catch, .hero__title, [data-keep-phrase] {
+  word-break: auto-phrase;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+@supports not (word-break: auto-phrase) {
+  h1, h2, h3, h4, h5,
+  .lead, .catch, .hero__title, [data-keep-phrase] {
+    word-break: normal;
+  }
+}
+/* 明示的に折りたくない語の途中で切られたら、その語を <span class="nobr"> で包む */
+.nobr { white-space: nowrap; }
+
+/* ── 最小文字サイズ ───────────────────────────────────────
+ * 判断材料になる文字は12px未満にしない。注記・免責のみ .note を許容。 */
+:root { --fs-min: 12px; --fs-body: 16px; }
+body { font-size: var(--fs-body); line-height: 1.8; }
+small, .note, figcaption { font-size: var(--fs-min); line-height: 1.7; }
+
+/* ── ファーストビューの見出し ─────────────────────────────
+ * 固定pxだと狭い画面で必ず折り返す。clamp で画面幅に追従させる。 */
+h1, .hero__title { font-size: clamp(1.55rem, 5.2vw, 3.25rem); line-height: 1.35; }
+h2 { font-size: clamp(1.3rem, 3.6vw, 2.1rem); line-height: 1.45; }
+
+/* ── 固定CTAの逃げ ────────────────────────────────────────
+ * 画面下に固定CTAを置くページは、この変数を実測の高さに書き換える。
+ * 置かないページはそのままでよい（0のまま）。 */
+:root { --fixed-cta-h: 0px; }
+body { padding-bottom: calc(var(--fixed-cta-h) + env(safe-area-inset-bottom, 0px)); }
+
+/* ── 横はみ出しの予防 ─────────────────────────────────────
+ * flex/grid の子は既定で min-width:auto のため、長い語で親を押し広げる。 */
+*, *::before, *::after { box-sizing: border-box; }
+img, svg, video, canvas, iframe { max-width: 100%; height: auto; }
+main > *, section > *, .grid > *, .flex > * { min-width: 0; }
+pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
+
+
+:root{
+  --ink:#1b1b1b; --sub:#7c7c7c; --faint:#a3a3a3;
+  --green:#173b2d; --deep:#0D281C; --gold-d:#8a6d31;
+  --bg:#fff; --tint:#f7f7f5; --line:#ececea;
+  --r:8px;
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic Medium","Yu Gothic",Meiryo,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;color:var(--ink);background:var(--bg);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;}
+.wrap{width:min(1060px,calc(100% - 40px));margin:0 auto;}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:20;padding:.7rem 1rem;color:#fff;background:var(--green);border-radius:var(--r);}
+.skip:focus{top:1rem;}
+
+/* ヘッダー */
+.site-head{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.site-head .wrap{min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:inline-flex;align-items:center;gap:9px;font-size:.95rem;font-weight:700;letter-spacing:.01em;}
+.brand i{width:22px;height:22px;border-radius:6px;background:var(--green);}
+.nav{display:flex;gap:20px;}
+.nav a{color:#555;font-size:.83rem;font-weight:700;}
+.nav a:hover{color:var(--green);}
+
+/* 上部の告知バー（noteの話題バーに相当） */
+.notice{margin:14px auto 0;display:flex;align-items:center;gap:10px;padding:11px 16px;background:var(--tint);border-radius:var(--r);}
+.notice b{flex:none;color:var(--gold-d);font-size:.68rem;font-weight:800;letter-spacing:.12em;}
+.notice time{flex:none;color:var(--faint);font-size:.74rem;}
+.notice span{color:#444;font-size:.83rem;}
+
+/* 表紙は軽く */
+.hero{padding:clamp(30px,4vw,48px) 0 clamp(10px,2vw,18px);}
+.hero h1{margin:0;font-size:clamp(1.5rem,3.4vw,2.15rem);font-weight:700;line-height:1.5;letter-spacing:.005em;}
+.hero p{max-width:640px;margin:12px 0 0;color:var(--sub);font-size:.88rem;line-height:1.85;}
+
+/* セクション見出し */
+.sec-head{display:flex;align-items:baseline;gap:10px;padding:clamp(34px,4.4vw,52px) 0 16px;}
+.sec-head h2{margin:0;font-size:1.12rem;font-weight:700;letter-spacing:.01em;}
+.sec-head .arw{color:var(--faint);font-size:1rem;}
+.sec-head .cnt{margin:0 0 0 auto;color:var(--faint);font-size:.78rem;}
+
+/* 記事カード（代表インタビュー） */
+.article{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(18px,2.6vw,34px);align-items:center;}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;
+  background:linear-gradient(135deg,var(--deep) 0%,#20402e 55%,#2c5540 100%);
+  display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,2.4vw,28px);}
+.thumb .th-tag{color:rgba(255,255,255,.66);font-size:.68rem;font-weight:800;letter-spacing:.14em;}
+.thumb .th-ttl{color:#fff;font-size:clamp(1.15rem,2.4vw,1.75rem);font-weight:700;line-height:1.5;letter-spacing:.01em;}
+.thumb .th-ft{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:.72rem;}
+.thumb .th-ft i{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.22);flex:none;}
+.article:hover .thumb{filter:brightness(1.07);}
+.art-body h3{margin:0;font-size:clamp(1.12rem,2vw,1.42rem);font-weight:700;line-height:1.6;}
+.art-body p{margin:10px 0 0;color:var(--sub);font-size:.86rem;line-height:1.85;}
+.byline{display:flex;align-items:center;gap:8px;margin-top:14px;}
+.byline i{width:24px;height:24px;border-radius:50%;background:var(--green);flex:none;}
+.byline span{color:var(--sub);font-size:.78rem;}
+.byline em{font-style:normal;color:#3d3d3d;font-weight:700;}
+.art-go{display:inline-flex;align-items:center;gap:7px;min-height:40px;margin-top:18px;padding:0 18px;border-radius:999px;background:var(--green);color:#fff;font-size:.8rem;font-weight:700;}
+.article:hover .art-go{background:var(--deep);}
+
+/* メンバー：枠線なし。角丸の写真＋余白で区切る */
+.members{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.2vw,28px) clamp(14px,1.8vw,22px);}
+.member{display:block;}
+.shot{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--tint);}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 24%;transition:transform .45s ease;}
+.member:hover .shot img{transform:scale(1.035);}
+.shot--none{display:grid;place-items:center;background:linear-gradient(135deg,var(--deep),#2c5540);}
+.shot--none b{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;color:rgba(255,255,255,.9);letter-spacing:.08em;}
+.veil{position:absolute;inset:0;display:flex;align-items:flex-end;padding:14px;opacity:0;transition:opacity .22s ease;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(13,40,28,.88));}
+.member:hover .veil{opacity:1;}
+.veil p{margin:0;color:#fff;font-size:.85rem;font-weight:700;line-height:1.6;}
+.m-name{margin:11px 0 0;font-size:1.02rem;font-weight:700;line-height:1.45;}
+.m-nick{margin:4px 0 0;color:var(--faint);font-size:.76rem;}
+.m-role{margin:7px 0 0;color:var(--sub);font-size:.78rem;line-height:1.6;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;min-height:calc(.78rem * 1.6 * 2);}
+.member--soon{display:grid;place-items:center;aspect-ratio:4/5;border-radius:var(--r);background:var(--tint);color:var(--sub);text-align:center;font-size:.8rem;line-height:1.8;padding:18px;}
+.member--soon strong{display:block;margin-bottom:5px;color:#4a4a4a;}
+
+/* サービス：軽いリスト */
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(20px,3vw,44px);}
+.svc a{display:flex;align-items:center;gap:12px;padding:14px 4px;border-bottom:1px solid var(--line);}
+.svc a:hover{background:var(--tint);}
+.svc .no{flex:none;width:24px;color:var(--faint);font-size:.7rem;font-weight:700;}
+.svc .tx{display:block;min-width:0;flex:1;}
+.svc .nm{display:block;font-size:.93rem;font-weight:700;line-height:1.45;}
+.svc .ds{display:block;margin-top:2px;color:var(--sub);font-size:.78rem;line-height:1.55;}
+.svc .ow{flex:none;margin-left:auto;padding:2px 9px;border-radius:999px;background:var(--tint);color:#5a5a5a;font-size:12px;white-space:nowrap;}
+.svc .ar{flex:none;color:var(--faint);}
+.svc a:hover .ar{color:var(--green);}
+.svc-all{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:22px;padding:16px 20px;border-radius:var(--r);background:var(--tint);font-size:.86rem;font-weight:700;}
+.svc-all span:last-child{color:var(--green);}
+
+footer{margin-top:clamp(44px,6vw,72px);border-top:1px solid var(--line);padding:22px 0 36px;color:var(--faint);font-size:.76rem;}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+/* 文節で折る（lp-baseは見出しのみ対象のため本文にも適用） */
+.m-name,.m-nick,.m-role,.svc .nm,.svc .ds,.member--soon p,.art-body p,.thumb .th-ttl,.notice span,.hero p{
+  word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere;
+}
+@supports not (word-break:auto-phrase){
+  .m-name,.m-nick,.m-role,.svc .nm,.svc .ds,.member--soon p,.art-body p,.thumb .th-ttl,.notice span,.hero p{word-break:normal;}
+}
+
+@media (max-width:1000px){ .members{grid-template-columns:repeat(3,minmax(0,1fr));} }
+@media (max-width:760px){
+  .nav{display:none;}
+  .article{grid-template-columns:1fr;gap:14px;align-items:start;}
+  .svc{grid-template-columns:1fr;}
+}
+@media (max-width:540px){
+  .members{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;}
+  .veil{display:none;}
+  .m-name{font-size:.94rem;}
+  .m-role{font-size:.74rem;-webkit-line-clamp:3;min-height:calc(.74rem * 1.6 * 3);}
+  .notice{flex-wrap:wrap;gap:6px 10px;}
+}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} *,*::before,*::after{transition-duration:.01ms !important;} }
+</style>
 </head>
 <body>
-  <a class="skip" href="#members">メンバー一覧へ移動</a>
-  <header class="site-head">
-    <div class="wrap">
-      <a class="brand" href="./">AI CONSULTANT MEMBERS</a>
-      <p class="division">WRITEUP INC. / SALES &amp; CONSULTING</p>
+<a class="skip" href="#members">メンバー一覧へ移動</a>
+
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="./"><i aria-hidden="true"></i>WRITEUP MEMBERS</a>
+  <nav class="nav">
+    <a href="#interview">インタビュー</a>
+    <a href="#members">メンバー</a>
+    <a href="#services">サービス</a>
+  </nav>
+</div></header>
+
+<main>
+  <div class="wrap">
+    <div class="notice">
+      <b>UPDATE</b><time datetime="2026-09-12">2026.09.12</time>
+      <span>メンバー7名のプロフィールを更新しました。</span>
     </div>
-  </header>
-  <main>
-    <section class="hero" aria-labelledby="page-title">
-      <div class="wrap">
-        <p class="eyebrow">PEOPLE WHO BUILD THE NEXT STEP</p>
-        <h1 id="page-title">AIを、現場で<br>使える一歩へ。</h1>
-        <p>営業の現場経験とAI活用の両方を知る、株式会社ライトアップのAIコンサルタントメンバー紹介です。担当者の経験や得意領域、仕事の外にある人柄もご覧いただけます。</p>
+  </div>
+
+  <section class="hero"><div class="wrap">
+    <h1>AIを、現場で使える一歩へ。</h1>
+    <p>営業の現場経験とAI活用の両方を知る、株式会社ライトアップのメンバー紹介です。担当者の経験や得意領域、仕事の外にある人柄もご覧いただけます。</p>
+  </div></section>
+
+  <section class="wrap" id="interview" aria-labelledby="interview-title">
+    <div class="sec-head">
+      <h2 id="interview-title">代表インタビュー</h2><span class="arw" aria-hidden="true">›</span>
+      <p class="cnt">毎月更新</p>
+    </div>
+    <a class="article" href="interview/">
+      <div class="thumb">
+        <span class="th-tag">THIS MONTH ／ 2026.09</span>
+        <span class="th-ttl">今月の弊社AI事業、<br>注目ポイントとは。</span>
+        <span class="th-ft"><i aria-hidden="true"></i>代表 白石に聞く</span>
       </div>
-    </section>
-    <section class="wrap" id="members" aria-labelledby="members-title">
-      <div class="list-head">
-        <h2 id="members-title">Members</h2>
-        <p class="count">07 / MORE TO COME</p>
-      </div>
-      <div class="members">
-        <a class="member-card" href="tsuchiya/" aria-label="土屋 慧介のプロフィールを見る">
-          <div class="portrait"><img src="tsuchiya/profile-assets/curly-hair.jpg" width="741" height="1000" alt="正面を向いて笑う土屋慧介"></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 01 ／ 第一営業部</p>
-            <p class="role">AI活用アドバイザー ／ 売上2倍担当</p>
-            <h3>土屋 慧介</h3>
-            <p class="nick">つっちー</p>
-            <p class="catch">髪は天然。営業は設計。AIは本気。<br>現場で培った経験を、仕組みに変える。</p>
-            <div class="meta"><span>2012 営業の原点</span><span>12年 法人営業</span><span>4領域 AI活用支援</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <a class="member-card" href="enomoto/" aria-label="榎本 翔太のプロフィールを見る">
-          <div class="portrait"><img src="enomoto/profile-assets/main.jpg" width="940" height="1600" alt="スーツ姿で正面を向く榎本翔太"></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 02 ／ 第一営業部</p>
-            <p class="role">AI活用アドバイザー ／ 売上2倍担当</p>
-            <h3>榎本 翔太</h3>
-            <p class="nick">もっさん</p>
-            <p class="catch">1年かけて、<br>御社の売上を2倍に。</p>
-            <div class="meta"><span>4領域 AI活用支援</span><span>毎月1つ ずつ導入</span><span>得意業種 toB新規開拓</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <a class="member-card" href="sato/" aria-label="佐藤 昴のプロフィールを見る">
-          <div class="portrait"><img src="sato/profile-assets/main.jpg" width="1200" height="1600" alt="「ペンションすばる」の看板を指さす佐藤昴"></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 03 ／ 経営コンサルティング局</p>
-            <p class="role">Jマッチエンジン ／ OEM提供 担当</p>
-            <h3>佐藤 昴</h3>
-            <p class="nick">すばる</p>
-            <p class="catch">「お金がない」を、<br>AI化しない理由にさせない。</p>
-            <div class="meta"><span>OEM 御社の看板で配る</span><span>毎週 使える制度が届く</span><span>6体 AIエージェントが伴走</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <a class="member-card" href="tamura/" aria-label="田村 大輔のプロフィールを見る">
-          <div class="portrait portrait--mono"><span aria-hidden="true">田村</span></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 04 ／ 経営コンサルティング局</p>
-            <p class="role">Jマッチエンジン ／ OEM提供 担当</p>
-            <h3>田村 大輔</h3>
-            <p class="nick">たむら だいすけ</p>
-            <p class="catch">ご縁を、<br>一度きりで終わらせません。</p>
-            <div class="meta"><span>5年 携帯ショップの店頭</span><span>2023 ライトアップへ</span><span>0→1 土台の整備</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <a class="member-card" href="matsui/" aria-label="松井 友美のプロフィールを見る">
-          <div class="portrait"><img src="matsui/profile-assets/main.jpg" width="1600" height="1200" alt="旅先の道で両手を広げる松井友美"></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 05 ／ 第2営業部</p>
-            <p class="role">第2営業部 リーダー ／ パートナー様の伴走支援</p>
-            <h3>松井 友美</h3>
-            <p class="nick">まっちゃん</p>
-            <p class="catch">AIだけでは、<br>温度感までは届きません。</p>
-            <div class="meta"><span>毎週 お電話</span><span>毎月 ミーティング</span><span>毎週 新商品の説明会</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <a class="member-card" href="eda/" aria-label="江田 梨奈のプロフィールを見る">
-          <div class="portrait"><img src="eda/profile-assets/main.jpg" width="1108" height="1477" alt="古い車両の前に立つ江田梨奈"></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 06 ／ 第2営業部</p>
-            <p class="role">パートナー様の募集 ／ AIOマスター OEM</p>
-            <h3>江田 梨奈</h3>
-            <p class="nick">えだっち</p>
-            <p class="catch">AIに詳しくないところから<br>始める不安は、よく分かります。</p>
-            <div class="meta"><span>2026 第2営業部へ</span><span>AIO マスターのOEM</span><span>新規 パートナー様の募集</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <a class="member-card" href="furihata/" aria-label="降旗 一也のプロフィールを見る">
-          <div class="portrait"><img src="furihata/profile-assets/main.png" width="739" height="933" alt="スーツ姿で正面を向く降旗一也"></div>
-          <div class="copy">
-            <p class="member-no">MEMBER 07 ／ 第2営業部</p>
-            <p class="role">代理店・パートナー営業</p>
-            <h3>降旗 一也</h3>
-            <p class="nick">ふりはた かずや</p>
-            <p class="catch">営業と、ツールづくりの間。<br>そこをやる人になります。</p>
-            <div class="meta"><span>3年 テニスコーチ</span><span>6年 飲食業</span><span>5年 ライトアップ</span></div>
-            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
-          </div>
-        </a>
-        <div class="future" aria-label="今後の掲載予定">
-          <p><strong>More members, coming soon.</strong>この場所に、各部署のメンバー紹介を順次追加します。</p>
+      <div class="art-body">
+        <h3>今月の弊社AI事業、注目ポイントとは。</h3>
+        <p>現場で何が動いていて、どこに手を入れているのか。数字の裏にある判断と、来月に向けて仕込んでいることを、代表に聞きました。</p>
+        <div class="byline">
+          <i aria-hidden="true"></i>
+          <span><em>白石 崇</em> ／ 代表取締役</span>
         </div>
+        <span class="art-go">記事を読む <span aria-hidden="true">→</span></span>
       </div>
-    </section>
-  </main>
-  <footer><div class="wrap">© Writeup Inc. / AI Consultant Members</div></footer>
+    </a>
+  </section>
+
+  <section class="wrap" id="members" aria-labelledby="members-title">
+    <div class="sec-head">
+      <h2 id="members-title">メンバー</h2><span class="arw" aria-hidden="true">›</span>
+      <p class="cnt">7名／順次追加</p>
+    </div>
+    <div class="members">
+
+      <a class="member" href="tsuchiya/">
+        <div class="shot">
+          <img src="tsuchiya/profile-assets/curly-hair.jpg" width="741" height="1000" alt="正面を向いて笑う土屋慧介" loading="lazy">
+          <div class="veil"><p>髪は天然。営業は設計。AIは本気。</p></div>
+        </div>
+        <p class="m-name">土屋 慧介</p>
+        <p class="m-nick">つっちー</p>
+        <p class="m-role">第一営業部 ／ AI活用アドバイザー ／ 売上2倍担当</p>
+      </a>
+
+      <a class="member" href="enomoto/">
+        <div class="shot">
+          <img src="enomoto/profile-assets/main.jpg" width="940" height="1600" alt="スーツ姿で正面を向く榎本翔太" loading="lazy">
+          <div class="veil"><p>1年かけて、御社の売上を2倍に。</p></div>
+        </div>
+        <p class="m-name">榎本 翔太</p>
+        <p class="m-nick">もっさん</p>
+        <p class="m-role">第一営業部 ／ AI活用アドバイザー ／ 売上2倍担当</p>
+      </a>
+
+      <a class="member" href="sato/">
+        <div class="shot">
+          <img src="sato/profile-assets/main.jpg" width="1200" height="1600" alt="「ペンションすばる」の看板を指さす佐藤昴" loading="lazy">
+          <div class="veil"><p>「お金がない」を、AI化しない理由にさせない。</p></div>
+        </div>
+        <p class="m-name">佐藤 昴</p>
+        <p class="m-nick">すばる</p>
+        <p class="m-role">経営コンサルティング局 ／ Jマッチエンジン ／ OEM提供 担当</p>
+      </a>
+
+      <a class="member" href="tamura/">
+        <div class="shot shot--none">
+          <b aria-hidden="true">田村</b>
+          <div class="veil"><p>ご縁を、一度きりで終わらせません。</p></div>
+        </div>
+        <p class="m-name">田村 大輔</p>
+        <p class="m-nick">たむら だいすけ</p>
+        <p class="m-role">経営コンサルティング局 ／ Jマッチエンジン ／ OEM提供 担当</p>
+      </a>
+
+      <a class="member" href="matsui/">
+        <div class="shot">
+          <img src="matsui/profile-assets/main.jpg" width="1600" height="1200" alt="旅先の道で両手を広げる松井友美" loading="lazy">
+          <div class="veil"><p>AIだけでは、温度感までは届きません。</p></div>
+        </div>
+        <p class="m-name">松井 友美</p>
+        <p class="m-nick">まっちゃん</p>
+        <p class="m-role">第2営業部 ／ 第2営業部 リーダー ／ パートナー様の伴走支援</p>
+      </a>
+
+      <a class="member" href="eda/">
+        <div class="shot">
+          <img src="eda/profile-assets/main.jpg" width="1108" height="1477" alt="古い車両の前に立つ江田梨奈" loading="lazy">
+          <div class="veil"><p>AIに詳しくないところから始める不安は、よく分かります。</p></div>
+        </div>
+        <p class="m-name">江田 梨奈</p>
+        <p class="m-nick">えだっち</p>
+        <p class="m-role">第2営業部 ／ パートナー様の募集 ／ AIOマスター OEM</p>
+      </a>
+
+      <a class="member" href="furihata/">
+        <div class="shot">
+          <img src="furihata/profile-assets/main.png" width="739" height="933" alt="スーツ姿で正面を向く降旗一也" loading="lazy">
+          <div class="veil"><p>営業と、ツールづくりの間。そこをやる人になります。</p></div>
+        </div>
+        <p class="m-name">降旗 一也</p>
+        <p class="m-nick">ふりはた かずや</p>
+        <p class="m-role">第2営業部 ／ 代理店・パートナー営業</p>
+      </a>
+
+      <div class="member--soon"><p><strong>More members,<br>coming soon.</strong>各部署のメンバーを順次追加します。</p></div>
+
+    </div>
+  </section>
+
+  <section class="wrap" id="services" aria-labelledby="services-title">
+    <div class="sec-head">
+      <h2 id="services-title">主要サービス</h2><span class="arw" aria-hidden="true">›</span>
+      <p class="cnt">11件</p>
+    </div>
+    <div class="svc">
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">01</span><span class="tx"><span class="nm">AIOマスター</span><span class="ds">AI検索で指名される状態をつくる</span></span><span class="ow">江田</span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">02</span><span class="tx"><span class="nm">Lシンク</span><span class="ds">LINEでの一次対応をAIが担う</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">03</span><span class="tx"><span class="nm">ソーシャルマスター</span><span class="ds">SNSの発信を自動で回す</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">04</span><span class="tx"><span class="nm">受電AI</span><span class="ds">電話の取りこぼしを防ぐ</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">05</span><span class="tx"><span class="nm">つばめリード</span><span class="ds">新しい接点を継続して集める</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">06</span><span class="tx"><span class="nm">つばめリファラル</span><span class="ds">紹介の流れを収益につなげる</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">07</span><span class="tx"><span class="nm">名刺LINEエージェント</span><span class="ds">交換した名刺を接点に変える</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">08</span><span class="tx"><span class="nm">Lマッチ</span><span class="ds">問い合わせと担当をつなぐ</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">09</span><span class="tx"><span class="nm">ちりつもAI</span><span class="ds">小さな入口から接点をためる</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">10</span><span class="tx"><span class="nm">AIバード</span><span class="ds">導入から運用まで伴走する</span></span><span class="ar" aria-hidden="true">›</span></a>
+      <a href="https://writeup-inc.github.io/saas/"><span class="no">11</span><span class="tx"><span class="nm">士業AI実務パック</span><span class="ds">士業の実務をAIで組み立てる</span></span><span class="ar" aria-hidden="true">›</span></a>
+    </div>
+    <a class="svc-all" href="https://writeup-inc.github.io/saas/">
+      <span>サービスの一覧と新着はこちら</span><span>WRITEUP / SaaS ›</span>
+    </a>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <span>© Writeup Inc. / Members</span>
+  <span>最終更新 2026.09.12</span>
+</div></footer>
 </body>
 </html>
