@@ -50,6 +50,8 @@
     .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:auto; padding-top:28px; }
     .links span { display:inline-flex; align-items:center; min-height:38px; padding:0 14px; border:1px solid var(--green); font-size:.82rem; font-weight:800; letter-spacing:.06em; }
     .links span:last-child { color:#fff; background:var(--green); }
+    .portrait--mono { display:grid; place-items:center; background:linear-gradient(128deg,#0D281C,#213E2C); }
+    .portrait--mono span { font-family:var(--serif); font-size:clamp(2.4rem,5vw,4rem); color:rgba(255,255,255,.9); letter-spacing:.1em; }
     .future { grid-column:span 12; display:grid; place-items:center; min-height:156px; border:1px dashed rgba(16,38,27,.35); color:#697368; text-align:center; }
     .future p { margin:0; font-size:.93rem; }
     .future strong { display:block; margin-bottom:4px; color:var(--ink); font-size:1rem; }
@@ -77,13 +79,13 @@
     <section class="wrap" id="members" aria-labelledby="members-title">
       <div class="list-head">
         <h2 id="members-title">Members</h2>
-        <p class="count">02 / MORE TO COME</p>
+        <p class="count">07 / MORE TO COME</p>
       </div>
       <div class="members">
-        <a class="member-card" href="tsuchiya/" aria-label="土屋慧介のプロフィールを見る">
+        <a class="member-card" href="tsuchiya/" aria-label="土屋 慧介のプロフィールを見る">
           <div class="portrait"><img src="tsuchiya/profile-assets/curly-hair.jpg" width="741" height="1000" alt="正面を向いて笑う土屋慧介"></div>
           <div class="copy">
-            <p class="member-no">MEMBER 01</p>
+            <p class="member-no">MEMBER 01 ／ 第一営業部</p>
             <p class="role">AI活用アドバイザー ／ 売上2倍担当</p>
             <h3>土屋 慧介</h3>
             <p class="nick">つっちー</p>
@@ -92,15 +94,75 @@
             <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
           </div>
         </a>
-        <a class="member-card" href="sato/" aria-label="佐藤昴のプロフィールを見る">
+        <a class="member-card" href="enomoto/" aria-label="榎本 翔太のプロフィールを見る">
+          <div class="portrait"><img src="enomoto/profile-assets/main.jpg" width="940" height="1600" alt="スーツ姿で正面を向く榎本翔太"></div>
+          <div class="copy">
+            <p class="member-no">MEMBER 02 ／ 第一営業部</p>
+            <p class="role">AI活用アドバイザー ／ 売上2倍担当</p>
+            <h3>榎本 翔太</h3>
+            <p class="nick">もっさん</p>
+            <p class="catch">1年かけて、<br>御社の売上を2倍に。</p>
+            <div class="meta"><span>4領域 AI活用支援</span><span>毎月1つ ずつ導入</span><span>得意業種 toB新規開拓</span></div>
+            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
+          </div>
+        </a>
+        <a class="member-card" href="sato/" aria-label="佐藤 昴のプロフィールを見る">
           <div class="portrait"><img src="sato/profile-assets/main.jpg" width="1200" height="1600" alt="「ペンションすばる」の看板を指さす佐藤昴"></div>
           <div class="copy">
-            <p class="member-no">MEMBER 02</p>
+            <p class="member-no">MEMBER 03 ／ 経営コンサルティング局</p>
             <p class="role">Jマッチエンジン ／ OEM提供 担当</p>
             <h3>佐藤 昴</h3>
             <p class="nick">すばる</p>
             <p class="catch">「お金がない」を、<br>AI化しない理由にさせない。</p>
             <div class="meta"><span>OEM 御社の看板で配る</span><span>毎週 使える制度が届く</span><span>6体 AIエージェントが伴走</span></div>
+            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
+          </div>
+        </a>
+        <a class="member-card" href="tamura/" aria-label="田村 大輔のプロフィールを見る">
+          <div class="portrait portrait--mono"><span aria-hidden="true">田村</span></div>
+          <div class="copy">
+            <p class="member-no">MEMBER 04 ／ 経営コンサルティング局</p>
+            <p class="role">Jマッチエンジン ／ OEM提供 担当</p>
+            <h3>田村 大輔</h3>
+            <p class="nick">たむら だいすけ</p>
+            <p class="catch">ご縁を、<br>一度きりで終わらせません。</p>
+            <div class="meta"><span>5年 携帯ショップの店頭</span><span>2023 ライトアップへ</span><span>0→1 土台の整備</span></div>
+            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
+          </div>
+        </a>
+        <a class="member-card" href="matsui/" aria-label="松井 友美のプロフィールを見る">
+          <div class="portrait"><img src="matsui/profile-assets/main.jpg" width="1600" height="1200" alt="旅先の道で両手を広げる松井友美"></div>
+          <div class="copy">
+            <p class="member-no">MEMBER 05 ／ 第2営業部</p>
+            <p class="role">第2営業部 リーダー ／ パートナー様の伴走支援</p>
+            <h3>松井 友美</h3>
+            <p class="nick">まっちゃん</p>
+            <p class="catch">AIだけでは、<br>温度感までは届きません。</p>
+            <div class="meta"><span>毎週 お電話</span><span>毎月 ミーティング</span><span>毎週 新商品の説明会</span></div>
+            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
+          </div>
+        </a>
+        <a class="member-card" href="eda/" aria-label="江田 梨奈のプロフィールを見る">
+          <div class="portrait"><img src="eda/profile-assets/main.jpg" width="1108" height="1477" alt="古い車両の前に立つ江田梨奈"></div>
+          <div class="copy">
+            <p class="member-no">MEMBER 06 ／ 第2営業部</p>
+            <p class="role">パートナー様の募集 ／ AIOマスター OEM</p>
+            <h3>江田 梨奈</h3>
+            <p class="nick">えだっち</p>
+            <p class="catch">AIに詳しくないところから<br>始める不安は、よく分かります。</p>
+            <div class="meta"><span>2026 第2営業部へ</span><span>AIO マスターのOEM</span><span>新規 パートナー様の募集</span></div>
+            <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
+          </div>
+        </a>
+        <a class="member-card" href="furihata/" aria-label="降旗 一也のプロフィールを見る">
+          <div class="portrait"><img src="furihata/profile-assets/main.png" width="739" height="933" alt="スーツ姿で正面を向く降旗一也"></div>
+          <div class="copy">
+            <p class="member-no">MEMBER 07 ／ 第2営業部</p>
+            <p class="role">代理店・パートナー営業</p>
+            <h3>降旗 一也</h3>
+            <p class="nick">ふりはた かずや</p>
+            <p class="catch">営業と、ツールづくりの間。<br>そこをやる人になります。</p>
+            <div class="meta"><span>3年 テニスコーチ</span><span>6年 飲食業</span><span>5年 ライトアップ</span></div>
             <div class="links"><span>STANDARD PROFILE</span><span>VIEW PROFILE →</span></div>
           </div>
         </a>
