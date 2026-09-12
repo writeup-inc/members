@@ -38,7 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-.like__visual.is-photo{ padding:0; overflow:hidden; }
+/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
+   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
+.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
 .like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
@@ -148,8 +150,14 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
       </div>
       <div class="likes__column">
         <div class="like">
-          <div class="like__visual is-photo" style="--op:center 43%">
-            <img src="profile-assets/pokemon.jpg" width="1074" height="806" decoding="async" alt="ポケモンセンターを訪れた塩崎万朔" style="object-position:center 43%">
+          <div class="like__visual" aria-hidden="true">
+            <svg viewBox="0 0 640 180"><circle class="gold" cx="546" cy="40" r="20"/>
+<path class="soft" d="M0 120c126-26 216-10 312 8 100 19 188 8 328-18v70H0z"/>
+<path class="paper" d="M0 150c136-20 246-14 354 2 86 12 164 9 286-8v36H0z"/>
+<g transform="translate(232 46)"><path class="deep" d="M14 58h148l-16-32H34z"/><path class="line" d="M6 58h164v26H6z"/>
+<circle class="paper" cx="42" cy="88" r="14"/><circle class="line" cx="42" cy="88" r="14"/>
+<circle class="paper" cx="134" cy="88" r="14"/><circle class="line" cx="134" cy="88" r="14"/></g>
+<path class="line" d="M62 140V104m-16 36 16-44 17 44m444 0v-30m-14 30 14-38 15 38"/></svg>
           </div>
           <h3>
             ポケモン <em>今年、全国17箇所を制覇</em>

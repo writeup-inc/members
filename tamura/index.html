@@ -38,7 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-.like__visual.is-photo{ padding:0; overflow:hidden; }
+/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
+   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
+.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
 .like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
