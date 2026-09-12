@@ -41,13 +41,10 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 佐藤ページ固有：写真を使う「好きなこと」カード */
+/* 佐藤ページ固有：写真を使う「好きなこと」カード。
+   枠は profile.css が --ar から組む。以前ここで指定していた切り位置
+   （center 38% / 56% 42%）は、比率のまま置くようになったため撤去した。 */
 .like__visual.is-photo{ padding:0; overflow:hidden; }
-.like__visual.is-photo img{
-  display:block; width:100%; height:100%;
-  object-fit:cover; object-position:center 38%;
-}
-.like__visual.is-photo--main img{ object-position:56% 42%; }
 /* 主担当タグと、カード下のリンク */
 .card h3 .tag{
   display:inline-block; margin-left:9px; padding:3px 9px; border-radius:999px;
@@ -135,35 +132,41 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
     <h2 class="sec-title sec-likes" style="margin-top:40px">好きなこと</h2>
     <div class="likes">
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/camp.jpg" width="1600" height="1200" decoding="async" alt="夜、林の中に張ったタープと焚き火">
           </div>
-          <h3>
-            野営風キャンプ <em>道具は減らす方向へ</em>
-          </h3>
-          <p>整ったキャンプ場より、タープを張って火を起こすくらいの、簡素なかたちが好きです。道具は増やすより減らす方向へ。夜、火を見ながら何もしない時間のために行っています。</p>
-          <span class="ask">野営できる場所を探しています。ご存じでしたら、ぜひ教えてください。</span>
+          <div class="like__text">
+            <h3>
+              野営風キャンプ <em>道具は減らす方向へ</em>
+            </h3>
+            <p>整ったキャンプ場より、タープを張って火を起こすくらいの、簡素なかたちが好きです。道具は増やすより減らす方向へ。夜、火を見ながら何もしない時間のために行っています。</p>
+            <span class="ask">野営できる場所を探しています。ご存じでしたら、ぜひ教えてください。</span>
+          </div>
         </div>
-        <div class="like">
-          <div class="like__visual is-photo is-photo--main">
+        <div class="like like--tall">
+          <div class="like__visual is-photo is-photo--main" style="--ar:1200/1600">
             <img src="profile-assets/main.jpg" width="1200" height="1600" decoding="async" alt="「ペンションすばる」と書かれた看板を指さす佐藤昴">
           </div>
-          <h3>
-            ペンションすばる <em>自分と同じ名前の宿</em>
-          </h3>
-          <p>旅先で、自分と同じ名前の宿を見つけました。「昴」は、そう多い名前ではありません。思わず看板を指さして撮った一枚です。商談でお名前の読み方をうかがうことが多いので、この話はよく使います。</p>
+          <div class="like__text">
+            <h3>
+              ペンションすばる <em>自分と同じ名前の宿</em>
+            </h3>
+            <p>旅先で、自分と同じ名前の宿を見つけました。「昴」は、そう多い名前ではありません。思わず看板を指さして撮った一枚です。商談でお名前の読み方をうかがうことが多いので、この話はよく使います。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/beach.jpg" width="1600" height="1200" decoding="async" alt="夕暮れの砂浜に立つ佐藤昴と娘">
           </div>
-          <h3>
-            娘との休日 <em>行き先は外が多い</em>
-          </h3>
-          <p>休みの日は、だいたい娘と外に出ています。海でも公園でも、本人が走り回れる場所なら機嫌は上々。この写真は冬の海辺で、風は冷たかったのですが、なかなか帰りたがりませんでした。</p>
+          <div class="like__text">
+            <h3>
+              娘との休日 <em>行き先は外が多い</em>
+            </h3>
+            <p>休みの日は、だいたい娘と外に出ています。海でも公園でも、本人が走り回れる場所なら機嫌は上々。この写真は冬の海辺で、風は冷たかったのですが、なかなか帰りたがりませんでした。</p>
+          </div>
         </div>
         <div class="like like--home">
           <div class="like__visual" aria-hidden="true">
@@ -182,10 +185,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
               <path class="line" d="M70 140V96m-20 44 20-56 21 56m420 0V104m-17 36 17-46 18 46"/>
             </svg>
           </div>
-          <h3>
-            料理 <em>つくるほうが落ち着く</em>
-          </h3>
-          <p>家では自分で作ることが多いです。段取りを組み、火加減を見て、決まった時間に出す——やっていることは仕事と変わりません。ただ、こちらのほうが結果がすぐ出るぶん、気が楽です。</p>
+          <div class="like__text">
+            <h3>
+              料理 <em>つくるほうが落ち着く</em>
+            </h3>
+            <p>家では自分で作ることが多いです。段取りを組み、火加減を見て、決まった時間に出す——やっていることは仕事と変わりません。ただ、こちらのほうが結果がすぐ出るぶん、気が楽です。</p>
+          </div>
         </div>
       </div>
     </div>

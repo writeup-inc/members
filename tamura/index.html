@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -137,11 +136,13 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="gold" d="M52 38c-10-12 0-20 0-28m30 28c-10-12 0-20 0-28m30 28c-10-12 0-20 0-28"/></g>
 <path class="line" d="M64 140V98m-18 42 18-52 19 52m438 0v-38m-16 38 16-44 17 44"/></svg>
           </div>
-          <h3>
-            サウナ <em>これまで150施設以上</em>
-          </h3>
-          <p>数えてみたら、行った施設が150を超えていました。新しい土地へ行くと、まずその街のサウナを調べます。商談先の近くにいいところがあれば、そのまま寄って帰ることもあります。</p>
+          <div class="like__text">
+            <h3>
+              サウナ <em>これまで150施設以上</em>
+            </h3>
+            <p>数えてみたら、行った施設が150を超えていました。新しい土地へ行くと、まずその街のサウナを調べます。商談先の近くにいいところがあれば、そのまま寄って帰ることもあります。</p>
           <span class="ask">おすすめのサウナがあれば、ぜひ教えてください。土地を問わず伺います。</span>
+          </div>
         </div>
         <div class="like like--home">
           <div class="like__visual" aria-hidden="true">
@@ -153,21 +154,25 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M96 116c0-16 10-26 22-26s22 10 22 26"/></g>
 <path class="line" d="M60 140V102m-16 38 16-46 17 46m452 0v-32m-14 32 14-40 15 40"/></svg>
           </div>
-          <h3>
-            娘との時間 <em>10か月になりました</em>
-          </h3>
-          <p>娘と一緒に「スンスン」の動画を観るのが、いまの日課です。10か月なので会話にはなりませんが、同じ画面を見て同じところで笑っている時間が、いちばん気が抜けます。</p>
+          <div class="like__text">
+            <h3>
+              娘との時間 <em>10か月になりました</em>
+            </h3>
+            <p>娘と一緒に「スンスン」の動画を観るのが、いまの日課です。10か月なので会話にはなりませんが、同じ画面を見て同じところで笑っている時間が、いちばん気が抜けます。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 35%">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1200/904">
             <img src="profile-assets/food.jpg" width="1200" height="904" decoding="async" alt="屋台の席で写真におさまる田村大輔" style="object-position:center 35%">
           </div>
-          <h3>
-            食べ歩き <em>夫婦のアカウントで投稿</em>
-          </h3>
-          <p>夫婦でアカウントを持っていて、行ったお店をSNSに投稿しています。どこで何を食べたかが記録として残るので、人におすすめを聞かれたときにすぐ出てくるようになりました。</p>
+          <div class="like__text">
+            <h3>
+              食べ歩き <em>夫婦のアカウントで投稿</em>
+            </h3>
+            <p>夫婦でアカウントを持っていて、行ったお店をSNSに投稿しています。どこで何を食べたかが記録として残るので、人におすすめを聞かれたときにすぐ出てくるようになりました。</p>
+          </div>
         </div>
       </div>
     </div>

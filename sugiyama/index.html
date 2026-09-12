@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -135,10 +134,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M96 116c0-16 10-26 22-26s22 10 22 26"/></g>
 <path class="line" d="M60 140V102m-16 38 16-46 17 46m452 0v-32m-14 32 14-40 15 40"/></svg>
           </div>
-          <h3>
-            子供と遊ぶ <em>6歳の男の子</em>
-          </h3>
-          <p>休みの日は、6歳の息子と遊んでいます。</p>
+          <div class="like__text">
+            <h3>
+              子供と遊ぶ <em>6歳の男の子</em>
+            </h3>
+            <p>休みの日は、6歳の息子と遊んでいます。</p>
+          </div>
         </div>
         <div class="like">
           <div class="like__visual" aria-hidden="true">
@@ -148,11 +149,13 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="paper" d="m236 134 62-82 63 82z"/><path class="line" d="m236 134 62-82 63 82m-63-82v82"/>
 <path class="line" d="M76 138V86m-21 52 21-66 23 66"/></svg>
           </div>
-          <h3>
-            ベランダビオトープ <em>メダカとタニシとエビ</em>
-          </h3>
-          <p>菜園の隣にビオトープもあります。メダカとタニシとエビがいます。</p>
+          <div class="like__text">
+            <h3>
+              ベランダビオトープ <em>メダカとタニシとエビ</em>
+            </h3>
+            <p>菜園の隣にビオトープもあります。メダカとタニシとエビがいます。</p>
           <span class="ask">ベランダでできることを、まだ探しています。</span>
+          </div>
         </div>
       </div>
       <div class="likes__column">
@@ -165,10 +168,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M172 20c-8 14-8 34 0 46v38"/></g>
 <path class="line" d="M62 142v-40m-17 40 17-50 18 50m448 0v-34m-15 34 15-42 16 42"/></svg>
           </div>
-          <h3>
-            ベランダ菜園 <em>食べられるものばかり</em>
-          </h3>
-          <p>ベランダで育てているのは、サクランボ、シャインマスカット、ミニトマト、しそ、ハーブ、ハラペーニョです。気づけば食べられるものばかりになっていました。</p>
+          <div class="like__text">
+            <h3>
+              ベランダ菜園 <em>食べられるものばかり</em>
+            </h3>
+            <p>ベランダで育てているのは、サクランボ、シャインマスカット、ミニトマト、しそ、ハーブ、ハラペーニョです。気づけば食べられるものばかりになっていました。</p>
+          </div>
         </div>
       </div>
     </div>

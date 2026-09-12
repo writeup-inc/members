@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -128,44 +127,52 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
     <h2 class="sec-title sec-likes" style="margin-top:40px">好きなこと</h2>
     <div class="likes">
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo">
-            <img src="profile-assets/machi.jpg" width="1600" height="1067" decoding="async" alt="アーケードのある商店街">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1069">
+            <img src="profile-assets/machi.jpg" width="1600" height="1069" decoding="async" alt="アーケードのある商店街">
           </div>
-          <h3>
-            商店街と下町 <em>住む場所も、この基準で</em>
-          </h3>
-          <p>商店街と下町の雰囲気が好きです。旅先でも、ついその土地の商店街に行きたくなります。いまは荒川区の下町に住んでいて、顔を覚えてもらい、声をかけてもらいながら子育てをしています。</p>
+          <div class="like__text">
+            <h3>
+              商店街と下町 <em>住む場所も、この基準で</em>
+            </h3>
+            <p>商店街と下町の雰囲気が好きです。旅先でも、ついその土地の商店街に行きたくなります。いまは荒川区の下町に住んでいて、顔を覚えてもらい、声をかけてもらいながら子育てをしています。</p>
           <span class="ask">レトロな商店街をご存じでしたら、ぜひ教えてください。旅先で寄ります。</span>
+          </div>
         </div>
-        <div class="like like--home">
-          <div class="like__visual is-photo">
+        <div class="like like--home like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/kids.jpg" width="1600" height="1200" decoding="async" alt="並んで眠る2人の子ども">
           </div>
-          <h3>
-            2児の母 <em>月に1回は家族で出かけます</em>
-          </h3>
-          <p>家族で月に1回は出かけています。海外も好きですし、北海道は一周しました。先日は山梨で桃をたくさん食べてきたところです。運転は夫の担当で、私は助手席で行き先を決める係です。</p>
+          <div class="like__text">
+            <h3>
+              2児の母 <em>月に1回は家族で出かけます</em>
+            </h3>
+            <p>家族で月に1回は出かけています。海外も好きですし、北海道は一周しました。先日は山梨で桃をたくさん食べてきたところです。運転は夫の担当で、私は助手席で行き先を決める係です。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 30%">
-            <img src="profile-assets/jazz.jpg" width="1600" height="1996" decoding="async" alt="ステージでバリトンサックスを演奏する松井友美" style="object-position:center 30%">
+        <div class="like like--tall">
+          <div class="like__visual is-photo" style="--ar:1282/1600">
+            <img src="profile-assets/jazz.jpg" width="1282" height="1600" decoding="async" alt="ステージでバリトンサックスを演奏する松井友美" style="object-position:center 30%">
           </div>
-          <h3>
-            ビッグバンドジャズ <em>大学の4年間</em>
-          </h3>
-          <p>大学ではビッグバンドジャズをやっていました。担当はサックスです。大勢で音を合わせる面白さを知ったのはここで、いまチームで動くときの感覚にも、どこかつながっている気がします。</p>
+          <div class="like__text">
+            <h3>
+              ビッグバンドジャズ <em>大学の4年間</em>
+            </h3>
+            <p>大学ではビッグバンドジャズをやっていました。担当はサックスです。大勢で音を合わせる面白さを知ったのはここで、いまチームで動くときの感覚にも、どこかつながっている気がします。</p>
+          </div>
         </div>
-        <div class="like">
-          <div class="like__visual is-photo">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/cat.jpg" width="1600" height="1200" decoding="async" alt="クッションの上に並ぶ黒猫と茶トラ猫">
           </div>
-          <h3>
-            もぐ と こてつ <em>2匹います</em>
-          </h3>
-          <p>黒いほうが「もぐ」で、茶色いほうが「こてつ」です。いまは実家で暮らしています。会いに行くたび、こちらのことは覚えているような、いないような顔で迎えてくれます。</p>
+          <div class="like__text">
+            <h3>
+              もぐ と こてつ <em>2匹います</em>
+            </h3>
+            <p>黒いほうが「もぐ」で、茶色いほうが「こてつ」です。いまは実家で暮らしています。会いに行くたび、こちらのことは覚えているような、いないような顔で迎えてくれます。</p>
+          </div>
         </div>
       </div>
     </div>

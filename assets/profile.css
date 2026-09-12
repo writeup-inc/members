@@ -212,14 +212,31 @@ p{ margin:0; }
   background:linear-gradient(145deg,#EEF4EF,#DDE8E0); border-bottom:1px solid var(--line);
 }
 .like__visual svg{ display:block; width:100%; height:100%; }
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、人物写真だと
-   顔の一部だけが帯状に出てしまう。生成ページ・手書きページの両方に効かせる */
-.like__visual.is-photo{ height:216px; }
+
+/* 写真は枠に合わせて切らず、写真の比率で枠を組む。
+   --ar は「幅/高さ」。テンプレートが実ファイルを測って埋める。
+   以前は高さ216px固定で、4:3なら高さの6割、縦長0.59なら7割超を捨てていた。
+   その結果どの写真も目元のドアップになっていた。 */
+.like__visual.is-photo{
+  height:auto; aspect-ratio:var(--ar, 4/3); background:none; padding:0;
+}
+.like__visual.is-photo img{
+  display:block; width:100%; height:100%; object-fit:cover;
+}
+
+/* 縦長（比率0.85未満）は、カードの幅で組み方を変える。
+   狭いカードでは上に全幅（＝横長と同じ。写真が主役になる）。
+   900px以上ではカードが441px／617pxに確定するので、そこで横組みに切り替え、
+   写真を左に立てて2列の流れの高さを揃える。
+   横組みを601pxから始めると、2列の中のカードで写真が133px幅まで痩せた。
+   カード幅で切るのが本来だが、@container は自分自身を問い合わせられず、
+   601〜899pxの列は display:contents で箱を持たないためコンテナにできない。 */
 .like__visual .line{ fill:none; stroke:var(--green); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
 .like__visual .soft{ fill:#C8D8CC; }
 .like__visual .deep{ fill:var(--green); }
 .like__visual .gold{ fill:#D8B85B; }
 .like__visual .paper{ fill:#F6F3EB; }
+.like__text{ min-width:0; }
 .like h3{
   margin:0 0 4px; font-size:var(--fs-h3); font-weight:700; color:var(--green);
   display:flex; align-items:center; flex-wrap:wrap; gap:4px 11px; min-width:0;
@@ -260,13 +277,12 @@ p{ margin:0; }
 .seeds ul b{ color:var(--green); }
 
 /* ── 写真 ─────────────────────────────── */
-.shots{ display:grid; grid-template-columns:1fr; gap:var(--sp-in); margin-top:24px; }
+.shots{ display:grid; grid-template-columns:1fr; gap:var(--sp-in); margin-top:24px; align-items:start; }
 .shots figure{ margin:0; }
 .shots img{
-  width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:10px;
+  width:100%; aspect-ratio:var(--ar, 4/3); object-fit:cover; border-radius:10px;
   background:#DDD8CC; display:block;
 }
-.shots .shot--portrait{ object-position:center 24%; }
 .shots figcaption{ margin-top:8px; color:var(--ink-sub); }
 
 /* ── 4領域 ────────────────────────────── */
@@ -445,7 +461,21 @@ a.svc__name:hover::after, a.svc__name:focus-visible::after{ opacity:1; }
   /* 文章量に合わせた2列の流れにして、段差由来の空白をなくす */
   .likes{ grid-template-columns:minmax(0,7fr) minmax(0,5fr); align-items:start; }
   .likes__column{ display:grid; gap:14px; align-content:start; }
-  .like__visual{ height:144px; }
+  /* イラストだけ詰める。写真は :not() で除外する（is-photo は比率で組むため） */
+  .like__visual:not(.is-photo){ height:144px; }
+
+  /* 縦長は横組みへ。写真と本文の2要素だけの1行にする。
+     見出し・本文・ask を別々の行にすると、写真の高さぶんの余りが行間へ
+     配られて間延びし、行を min-content で止めると今度は写真が
+     はみ出して切れる。本文を like__text でまとめてあるのはそのため。 */
+  .like--tall{
+    padding:0; display:grid; grid-template-columns:minmax(0,44%) minmax(0,1fr);
+    align-items:center;
+  }
+  .like--tall .like__visual{
+    margin:0; border-bottom:none; border-right:1px solid var(--line);
+  }
+  .like--tall .like__text{ padding:20px; }
   .seeds ul{
     display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
     gap:4px 30px; line-height:1.8;

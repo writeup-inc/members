@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -127,15 +126,17 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
     <h2 class="sec-title sec-likes" style="margin-top:40px">好きなこと</h2>
     <div class="likes">
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 50%">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1200/901">
             <img src="profile-assets/baseball.jpg" width="1200" height="901" decoding="async" alt="球場でユニフォーム姿の本村太" style="object-position:center 50%">
           </div>
-          <h3>
-            野球 <em>高校では三塁コーチャー</em>
-          </h3>
-          <p>高校の最後の夏は、県予選の決勝で負けました。甲子園には届きませんでしたが、あのときのベンチのことはいまでも覚えています。好きな選手は巨人の桑田真澄さんです。</p>
+          <div class="like__text">
+            <h3>
+              野球 <em>高校では三塁コーチャー</em>
+            </h3>
+            <p>高校の最後の夏は、県予選の決勝で負けました。甲子園には届きませんでしたが、あのときのベンチのことはいまでも覚えています。好きな選手は巨人の桑田真澄さんです。</p>
           <span class="ask">野球の話は、どこからでも入れます。</span>
+          </div>
         </div>
         <div class="like">
           <div class="like__visual" aria-hidden="true">
@@ -146,21 +147,25 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M172 20c-8 14-8 34 0 46v38"/></g>
 <path class="line" d="M62 142v-40m-17 40 17-50 18 50m448 0v-34m-15 34 15-42 16 42"/></svg>
           </div>
-          <h3>
-            菓子と売り場 <em>羽田空港と東京駅で20年</em>
-          </h3>
-          <p>スイーツとおみやげの売り場に、20年立っていました。旅立つ人が選ぶものと、帰ってくる人が選ぶものは違います。その違いを見続けた20年でした。</p>
+          <div class="like__text">
+            <h3>
+              菓子と売り場 <em>羽田空港と東京駅で20年</em>
+            </h3>
+            <p>スイーツとおみやげの売り場に、20年立っていました。旅立つ人が選ぶものと、帰ってくる人が選ぶものは違います。その違いを見続けた20年でした。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 8%">
+        <div class="like like--tall">
+          <div class="like__visual is-photo" style="--ar:590/1000">
             <img src="profile-assets/stage.jpg" width="590" height="1000" decoding="async" alt="法被姿の本村太" style="object-position:center 8%">
           </div>
-          <h3>
-            音楽 <em>90年代JPOPを歌います</em>
-          </h3>
-          <p>90年代のJPOPを歌います。好きなアーティストは米米CLUBです。会場に足を運ぶときは、この格好で行きます。</p>
+          <div class="like__text">
+            <h3>
+              音楽 <em>90年代JPOPを歌います</em>
+            </h3>
+            <p>90年代のJPOPを歌います。好きなアーティストは米米CLUBです。会場に足を運ぶときは、この格好で行きます。</p>
+          </div>
         </div>
         <div class="like">
           <div class="like__visual" aria-hidden="true">
@@ -172,10 +177,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M96 116c0-16 10-26 22-26s22 10 22 26"/></g>
 <path class="line" d="M60 140V102m-16 38 16-46 17 46m452 0v-32m-14 32 14-40 15 40"/></svg>
           </div>
-          <h3>
-            家族 <em>妻と中1の長男</em>
-          </h3>
-          <p>妻と、中学1年生の長男がいます。息子とは野球の話ができる年齢になってきました。</p>
+          <div class="like__text">
+            <h3>
+              家族 <em>妻と中1の長男</em>
+            </h3>
+            <p>妻と、中学1年生の長男がいます。息子とは野球の話ができる年齢になってきました。</p>
+          </div>
         </div>
       </div>
     </div>

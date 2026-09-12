@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -139,11 +138,13 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M30 116h132"/></g>
 <path class="line" d="M60 140v-30m-14 30 14-38 15 38"/></svg>
           </div>
-          <h3>
-            ゴルフ <em>歴10年、スコア100前後</em>
-          </h3>
-          <p>始めて10年になりますが、スコアは100前後で止まっています。うまくなりたい気持ちはあるものの、結局いちばん楽しいのは回っている間の時間のほうだと、最近は開き直ってきました。</p>
+          <div class="like__text">
+            <h3>
+              ゴルフ <em>歴10年、スコア100前後</em>
+            </h3>
+            <p>始めて10年になりますが、スコアは100前後で止まっています。うまくなりたい気持ちはあるものの、結局いちばん楽しいのは回っている間の時間のほうだと、最近は開き直ってきました。</p>
           <span class="ask">ご一緒できるコースがあれば、ぜひお声がけください。</span>
+          </div>
         </div>
         <div class="like like--home">
           <div class="like__visual" aria-hidden="true">
@@ -155,21 +156,25 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="gold" d="M52 38c-10-12 0-20 0-28m30 28c-10-12 0-20 0-28m30 28c-10-12 0-20 0-28"/></g>
 <path class="line" d="M64 140V98m-18 42 18-52 19 52m438 0v-38m-16 38 16-44 17 44"/></svg>
           </div>
-          <h3>
-            近所の銭湯 <em>マイサウナです</em>
-          </h3>
-          <p>遠出しなくても、近所の銭湯があれば十分です。資格まで取ってしまいました。サウナ・スパ健康アドバイザーという名前で、温度と時間の話なら、それなりに長くできます。</p>
+          <div class="like__text">
+            <h3>
+              近所の銭湯 <em>マイサウナです</em>
+            </h3>
+            <p>遠出しなくても、近所の銭湯があれば十分です。資格まで取ってしまいました。サウナ・スパ健康アドバイザーという名前で、温度と時間の話なら、それなりに長くできます。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 45%">
-            <img src="profile-assets/nature.jpg" width="1400" height="1600" decoding="async" alt="木々に囲まれた沢沿いの道に立つ榎本翔太" style="object-position:center 45%">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1514">
+            <img src="profile-assets/nature.jpg" width="1600" height="1514" decoding="async" alt="木々に囲まれた沢沿いの道に立つ榎本翔太" style="object-position:center 45%">
           </div>
-          <h3>
-            自然に触れる <em>緑の多い場所へ</em>
-          </h3>
-          <p>休みの日は、緑の多いところへ出かけます。愛犬と公園を散歩するのが日課で、朝の空気のいい時間に歩くと、その日の頭の回り方が変わる気がしています。</p>
+          <div class="like__text">
+            <h3>
+              自然に触れる <em>緑の多い場所へ</em>
+            </h3>
+            <p>休みの日は、緑の多いところへ出かけます。愛犬と公園を散歩するのが日課で、朝の空気のいい時間に歩くと、その日の頭の回り方が変わる気がしています。</p>
+          </div>
         </div>
         <div class="like">
           <div class="like__visual" aria-hidden="true">
@@ -181,10 +186,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="line" d="M52 44l84-16"/></g>
 <path class="line" d="M58 140v-30m-13 30 13-38 14 38m456 0v-26m-12 26 12-34 13 34"/></svg>
           </div>
-          <h3>
-            昭和歌謡 <em>先日はじめてのオーケストラ</em>
-          </h3>
-          <p>昭和歌謡曲をよく聴いています。先日はじめてオーケストラを聴きに行き、想像していたより揺さぶられました。録音と生では別物だ、というのを今さら知ったところです。</p>
+          <div class="like__text">
+            <h3>
+              昭和歌謡 <em>先日はじめてのオーケストラ</em>
+            </h3>
+            <p>昭和歌謡曲をよく聴いています。先日はじめてオーケストラを聴きに行き、想像していたより揺さぶられました。録音と生では別物だ、というのを今さら知ったところです。</p>
+          </div>
         </div>
       </div>
     </div>

@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -130,20 +129,24 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <circle class="paper" cx="134" cy="88" r="14"/><circle class="line" cx="134" cy="88" r="14"/></g>
 <path class="line" d="M62 140V104m-16 36 16-44 17 44m444 0v-30m-14 30 14-38 15 38"/></svg>
           </div>
-          <h3>
-            ドライブ <em>免許を取りたてです</em>
-          </h3>
-          <p>いまいちばん楽しいのがドライブです。行き先はだいたい自然のあるところで、景色のいい場所を探して走っています。目的地を決めずに出ることも多く、それはそれで楽しくなってきました。</p>
+          <div class="like__text">
+            <h3>
+              ドライブ <em>免許を取りたてです</em>
+            </h3>
+            <p>いまいちばん楽しいのがドライブです。行き先はだいたい自然のあるところで、景色のいい場所を探して走っています。目的地を決めずに出ることも多く、それはそれで楽しくなってきました。</p>
           <span class="ask">おすすめのドライブスポットがあれば、ぜひ教えてください。自然のあるところだと最高です。</span>
+          </div>
         </div>
-        <div class="like like--home">
-          <div class="like__visual is-photo">
+        <div class="like like--home like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/holiday.jpg" width="1600" height="1200" decoding="async" alt="テラス席のテーブルに置かれた本とコーヒー">
           </div>
-          <h3>
-            アウトドアな休日 <em>屋内にはこもりません</em>
-          </h3>
-          <p>休日はかなりアクティブに過ごすほうです。ピクニックに行ったり、ドライブしたり、ショッピングしたり。外でがっつり遊んで、途中でこういう場所に寄って休む、という日が多くなりました。</p>
+          <div class="like__text">
+            <h3>
+              アウトドアな休日 <em>屋内にはこもりません</em>
+            </h3>
+            <p>休日はかなりアクティブに過ごすほうです。ピクニックに行ったり、ドライブしたり、ショッピングしたり。外でがっつり遊んで、途中でこういう場所に寄って休む、という日が多くなりました。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
@@ -156,10 +159,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="gold" d="M150 54c14 8 20 20 20 34-14-7-22-19-26-34zm344 24c14-9 27-10 40-3-12 9-26 12-40 9z"/>
 <path class="line" d="M60 140v-34m-15 34 15-42 16 42"/></svg>
           </div>
-          <h3>
-            ダンスと音楽 <em>K-POPは割と踊れます</em>
-          </h3>
-          <p>ダンスは得意なほうで、K-POPは割と踊れます。音楽もよく聴いていて、aiko も好きです。曲やアーティストの話になると、けっこう盛り上がれると思います。</p>
+          <div class="like__text">
+            <h3>
+              ダンスと音楽 <em>K-POPは割と踊れます</em>
+            </h3>
+            <p>ダンスは得意なほうで、K-POPは割と踊れます。音楽もよく聴いていて、aiko も好きです。曲やアーティストの話になると、けっこう盛り上がれると思います。</p>
+          </div>
         </div>
         <div class="like">
           <div class="like__visual" aria-hidden="true">
@@ -169,10 +174,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <path class="paper" d="m236 134 62-82 63 82z"/><path class="line" d="m236 134 62-82 63 82m-63-82v82"/>
 <path class="line" d="M76 138V86m-21 52 21-66 23 66"/></svg>
           </div>
-          <h3>
-            自然のあるところ <em>ドライブとセットで</em>
-          </h3>
-          <p>ドライブに付随して、自然のある場所へ行くのが好きです。外に出て景色を眺めたり、空気のいいところで過ごす時間が好きで、行き先を選ぶときの基準もだいたいそこになります。</p>
+          <div class="like__text">
+            <h3>
+              自然のあるところ <em>ドライブとセットで</em>
+            </h3>
+            <p>ドライブに付随して、自然のある場所へ行くのが好きです。外に出て景色を眺めたり、空気のいいところで過ごす時間が好きで、行き先を選ぶときの基準もだいたいそこになります。</p>
+          </div>
         </div>
       </div>
     </div>

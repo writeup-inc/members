@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -127,25 +126,29 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
     <h2 class="sec-title sec-likes" style="margin-top:40px">好きなこと</h2>
     <div class="likes">
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 41%">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1200/900">
             <img src="profile-assets/baseball.jpg" width="1200" height="900" decoding="async" alt="球場でタオルを掲げる塩崎万朔" style="object-position:center 41%">
           </div>
-          <h3>
-            日本ハムファイターズ <em>北海道の出身なので</em>
-          </h3>
-          <p>北海道の出身ということもあって、大のファイターズファンです。大谷翔平選手のプロ野球デビュー登板を生で観たのが自慢で、いまでも年に数回は球場へ応援に行っています。</p>
+          <div class="like__text">
+            <h3>
+              日本ハムファイターズ <em>北海道の出身なので</em>
+            </h3>
+            <p>北海道の出身ということもあって、大のファイターズファンです。大谷翔平選手のプロ野球デビュー登板を生で観たのが自慢で、いまでも年に数回は球場へ応援に行っています。</p>
           <span class="ask">球場でご一緒できる方がいれば、ぜひ。</span>
+          </div>
         </div>
-        <div class="like">
-          <div class="like__visual is-photo" style="--op:center 49%">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1200/900">
             <img src="profile-assets/run.jpg" width="1200" height="900" decoding="async" alt="トレイルランの完走証を手にする塩崎万朔" style="object-position:center 49%">
           </div>
-          <h3>
-            走ること <em>12月に初マラソン</em>
-          </h3>
-          <p>今年5月に結婚しました。相手が体力オバケで、フルマラソンに毎年出場し、同年代の女性では日本でトップ50に入るような人です。自分も12月の初マラソンに向けて、日々走っています。</p>
+          <div class="like__text">
+            <h3>
+              走ること <em>12月に初マラソン</em>
+            </h3>
+            <p>今年5月に結婚しました。相手が体力オバケで、フルマラソンに毎年出場し、同年代の女性では日本でトップ50に入るような人です。自分も12月の初マラソンに向けて、日々走っています。</p>
           <span class="ask">先日の野沢温泉のトレイルランで、人生で初めて10km以上を走破しました。写真のとおり、本当に死ぬほどの想いをしています。</span>
+          </div>
         </div>
       </div>
       <div class="likes__column">
@@ -159,10 +162,12 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <circle class="paper" cx="134" cy="88" r="14"/><circle class="line" cx="134" cy="88" r="14"/></g>
 <path class="line" d="M62 140V104m-16 36 16-44 17 44m444 0v-30m-14 30 14-38 15 38"/></svg>
           </div>
-          <h3>
-            ポケモン <em>今年、全国17箇所を制覇</em>
-          </h3>
-          <p>全国17箇所にあるポケモンセンターを、今年ようやく制覇しました。2月には台湾にも行ってきています。残すはシンガポールなので、行けるチャンスを虎視眈々と狙っているところです。</p>
+          <div class="like__text">
+            <h3>
+              ポケモン <em>今年、全国17箇所を制覇</em>
+            </h3>
+            <p>全国17箇所にあるポケモンセンターを、今年ようやく制覇しました。2月には台湾にも行ってきています。残すはシンガポールなので、行けるチャンスを虎視眈々と狙っているところです。</p>
+          </div>
         </div>
       </div>
     </div>

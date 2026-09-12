@@ -38,10 +38,9 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 </style>
 <link rel="stylesheet" href="../assets/profile.css">
 <style>
-/* 写真のときだけ枠を高くする。156pxはイラスト用の高さで、
-   人物写真を入れると顔の一部だけが帯状に出てしまうため。SVGは156pxのまま */
-.like__visual.is-photo{ padding:0; overflow:hidden; height:216px; }
-.like__visual.is-photo img{ display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+/* 写真の枠はここでは決めない。比率は profile.css が --ar から組む。
+   以前はここで高さを216px固定していたが、どの写真も細長に切られて
+   顔のドアップになっていたため撤去した */
 .hero--nophoto .hero__inner{ grid-template-columns:1fr; }
 @media (min-width:700px){
   .hero--nophoto{ grid-template-columns:1fr; min-height:460px; }
@@ -138,40 +137,48 @@ pre, table, .scroll-x { overflow-x: auto; max-width: 100%; }
 <circle class="gold" cx="150" cy="86" r="16"/><path class="line" d="M136 80c10 8 20 8 28 0"/></g>
 <path class="line" d="M58 142v-36m-15 36 15-44 16 44"/></svg>
           </div>
-          <h3>
-            テニス <em>長野県代表でインターハイ</em>
-          </h3>
-          <p>高校ではテニスで長野県代表になり、インターハイへ出ました。大学の部活ではキャプテンです。勝ち方を考えるより、続け方を考えるほうが向いていると気づいたのは、このころでした。</p>
-        </div>
-        <div class="like like--home">
-          <div class="like__visual is-photo">
-            <img src="profile-assets/suwa.jpg" width="1600" height="1067" decoding="async" alt="高台から見下ろす諏訪湖">
+          <div class="like__text">
+            <h3>
+              テニス <em>長野県代表でインターハイ</em>
+            </h3>
+            <p>高校ではテニスで長野県代表になり、インターハイへ出ました。大学の部活ではキャプテンです。勝ち方を考えるより、続け方を考えるほうが向いていると気づいたのは、このころでした。</p>
           </div>
-          <h3>
-            地元・諏訪 <em>長野県諏訪市</em>
-          </h3>
-          <p>生まれは長野県の諏訪市です。この写真は高台から見た諏訪湖で、帰省のたびに一度は寄ります。御柱祭の年は町の空気がまるごと変わるので、その時期の話はいくらでもできます。</p>
+        </div>
+        <div class="like like--home like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
+            <img src="profile-assets/suwa.jpg" width="1600" height="1200" decoding="async" alt="高台から見下ろす諏訪湖">
+          </div>
+          <div class="like__text">
+            <h3>
+              地元・諏訪 <em>長野県諏訪市</em>
+            </h3>
+            <p>生まれは長野県の諏訪市です。この写真は高台から見た諏訪湖で、帰省のたびに一度は寄ります。御柱祭の年は町の空気がまるごと変わるので、その時期の話はいくらでもできます。</p>
+          </div>
         </div>
       </div>
       <div class="likes__column">
-        <div class="like">
-          <div class="like__visual is-photo">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/camp.jpg" width="1600" height="1200" decoding="async" alt="富士山を望むキャンプ場">
           </div>
-          <h3>
-            キャンプ <em>家族でよく行きます</em>
-          </h3>
-          <p>この日は、目の前に富士山がありました。前の晩から道具を積んで、朝早く出る。その準備の時間も含めて、まるごと好きです。</p>
+          <div class="like__text">
+            <h3>
+              キャンプ <em>家族でよく行きます</em>
+            </h3>
+            <p>この日は、目の前に富士山がありました。前の晩から道具を積んで、朝早く出る。その準備の時間も含めて、まるごと好きです。</p>
           <span class="ask">景色のいいキャンプ場をご存じでしたら、ぜひ教えてください。</span>
+          </div>
         </div>
-        <div class="like">
-          <div class="like__visual is-photo">
+        <div class="like like--wide">
+          <div class="like__visual is-photo" style="--ar:1600/1200">
             <img src="profile-assets/family.jpg" width="1600" height="1200" decoding="async" alt="キャンプ場で子どもたちと過ごす降旗一也">
           </div>
-          <h3>
-            4歳と1歳の父 <em>子煩悩です</em>
-          </h3>
-          <p>子どもは4歳と1歳です。休みの日はだいたい一緒にいます。アウトドア、ドライブ、旅行と、動くことばかり選んでいるのは、たぶん本人たちより私のほうが楽しんでいるからだと思います。</p>
+          <div class="like__text">
+            <h3>
+              4歳と1歳の父 <em>子煩悩です</em>
+            </h3>
+            <p>子どもは4歳と1歳です。休みの日はだいたい一緒にいます。アウトドア、ドライブ、旅行と、動くことばかり選んでいるのは、たぶん本人たちより私のほうが楽しんでいるからだと思います。</p>
+          </div>
         </div>
       </div>
     </div>

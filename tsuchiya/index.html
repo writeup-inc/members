@@ -274,13 +274,12 @@ p{ margin:0; }
 .seeds ul b{ color:var(--green); }
 
 /* ── 写真 ─────────────────────────────── */
-.shots{ display:grid; grid-template-columns:1fr; gap:var(--sp-in); margin-top:24px; }
+.shots{ display:grid; grid-template-columns:1fr; gap:var(--sp-in); margin-top:24px; align-items:start; }
 .shots figure{ margin:0; }
 .shots img{
-  width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:10px;
+  width:100%; aspect-ratio:var(--ar, 4/3); object-fit:cover; border-radius:10px;
   background:#DDD8CC; display:block;
 }
-.shots .shot--portrait{ object-position:center 24%; }
 .shots figcaption{ margin-top:8px; color:var(--ink-sub); }
 
 /* ── 4領域 ────────────────────────────── */
@@ -725,19 +724,19 @@ a.svc__name:hover::after, a.svc__name:focus-visible::after{ opacity:1; }
     <div class="shots">
       <figure>
         <div class="ph" data-ph="camp.jpg">
-          <img src="profile-assets/camp.jpg" width="1400" height="1117" loading="lazy" decoding="async" alt="キャンプ場で娘を抱く土屋慧介">
+          <img src="profile-assets/camp.jpg" width="1400" height="1117" loading="lazy" decoding="async" alt="キャンプ場で娘を抱く土屋慧介" style="--ar:1400/1117">
         </div>
         <figcaption>娘と一緒に楽しむ、家族キャンプ</figcaption>
       </figure>
       <figure>
         <div class="ph" data-ph="bike.jpg">
-          <img src="profile-assets/bike.jpg" width="1400" height="1105" loading="lazy" decoding="async" alt="北海道の宗谷岬に停めた土屋慧介のバイク">
+          <img src="profile-assets/bike.jpg" width="1400" height="1105" loading="lazy" decoding="async" alt="北海道の宗谷岬に停めた土屋慧介のバイク" style="--ar:1400/1105">
         </div>
         <figcaption>バイクで北海道・宗谷岬へ</figcaption>
       </figure>
       <figure>
         <div class="ph" data-ph="curly-hair.jpg">
-          <img class="shot--portrait" src="profile-assets/curly-hair.jpg" width="741" height="1000" loading="lazy" decoding="async" alt="天然パーマの髪で笑う土屋慧介">
+          <img class="shot--portrait" src="profile-assets/curly-hair.jpg" width="741" height="1000" loading="lazy" decoding="async" alt="天然パーマの髪で笑う土屋慧介" style="--ar:741/1000">
         </div>
         <figcaption>年々強くなる天然パーマも、本人らしさ</figcaption>
       </figure>
