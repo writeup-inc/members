@@ -111,12 +111,23 @@ p{ margin:0; }
   display:grid; grid-template-columns:clamp(136px,43%,210px) 1fr;
   gap:20px; align-items:end; min-width:0;
 }
+/* 金枠は写真を包む作りなので、枠の形は写真に任せる。
+   fit-content で枠が写真に張りつき、脇に深緑の地が出ない */
 .photo-frame{
   border-radius:2px; overflow:hidden; background:var(--green-deep);
   border:1px solid rgba(244,229,166,.72);
   box-shadow:10px 10px 0 rgba(216,184,91,.09), 0 28px 60px rgba(0,0,0,.25);
+  width:fit-content; max-width:100%; justify-self:start;
 }
-.photo-main{ display:block; width:100%; aspect-ratio:741/1000; object-fit:cover; object-position:center 24%; filter:saturate(.86) contrast(1.03); }
+/* ヒーローは切らない。統一感は「同じ形」ではなく「同じ高さ」で出す。
+   以前は aspect-ratio:741/1000（土屋さんの写真の比率）を全員に当てており、
+   松井さんは横幅の44%、正方形で撮った4人は4分の1が枠の外だった。
+   各ページの object-position はその枠へ顔を寄せるための手調整で、
+   切るのをやめた時点で不要になったため撤去した。 */
+.photo-main{
+  display:block; width:auto; height:auto; max-width:100%;
+  filter:saturate(.86) contrast(1.03);
+}
 .hero__body{ min-width:0; }
 .hero__kicker{
   margin:0 0 12px; color:#F4E5A6; font-size:var(--fs-min); font-weight:700;
@@ -430,6 +441,10 @@ a.svc__name:hover::after, a.svc__name:focus-visible::after{ opacity:1; }
   .hero__inner{ display:contents; }
   .hero__top{ grid-column:1 / -1; margin-bottom:4px; align-self:start; }
   .photo-frame{ grid-column:1; grid-row:2 / span 4; }
+  /* 縦位置はここで高さが決まり、11枚のうち10枚が揃う。
+     440pxは、列幅が最も狭くなる350pxのとき縦位置の上限0.79が収まる値。
+     横長の1枚だけは幅で止まり、背が低くなる */
+  .photo-main{ max-height:440px; }
   .role{ grid-column:2; grid-row:2; justify-self:start; align-self:end; margin-bottom:8px; }
   .hero__body{ grid-column:2; grid-row:3; max-width:650px; }
   .hero__catch{ grid-column:2; grid-row:4; align-self:center; margin:22px 0; }

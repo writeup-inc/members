@@ -128,12 +128,19 @@ p{ margin:0; }
   display:grid; grid-template-columns:clamp(136px,43%,210px) 1fr;
   gap:20px; align-items:end; min-width:0;
 }
+/* 金枠は写真を包む作りなので、枠の形は写真に任せる */
 .photo-frame{
   border-radius:2px; overflow:hidden; background:var(--green-deep);
   border:1px solid rgba(244,229,166,.72);
   box-shadow:10px 10px 0 rgba(216,184,91,.09), 0 28px 60px rgba(0,0,0,.25);
+  width:fit-content; max-width:100%; justify-self:start;
 }
-.photo-main{ display:block; width:100%; aspect-ratio:741/1000; object-fit:cover; object-position:center 24%; filter:saturate(.86) contrast(1.03); }
+/* ヒーローは切らない。統一感は「同じ形」ではなく「同じ高さ」で出す。
+   aspect-ratio:741/1000 はこの写真の比率で、それを全員に当てていた */
+.photo-main{
+  display:block; width:auto; height:auto; max-width:100%;
+  filter:saturate(.86) contrast(1.03);
+}
 .hero__body{ min-width:0; }
 .hero__kicker{
   margin:0 0 12px; color:#F4E5A6; font-size:var(--fs-min); font-weight:700;
@@ -229,6 +236,17 @@ p{ margin:0; }
   background:linear-gradient(145deg,#EEF4EF,#DDE8E0); border-bottom:1px solid var(--line);
 }
 .like__visual svg{ display:block; width:100%; height:100%; }
+
+/* このページは profile.css を読まず全文を自前で持っている。
+   「好きなこと」はいま全部イラストだが、写真を足したときに
+   旧来の細長帯へ戻らないよう、写真用の記述を profile.css と揃えておく。 */
+.like__visual.is-photo{
+  height:auto; aspect-ratio:var(--ar, 4/3); background:none; padding:0;
+}
+.like__visual.is-photo img{
+  display:block; width:100%; height:100%; object-fit:cover;
+}
+.like__text{ min-width:0; }
 .like__visual .line{ fill:none; stroke:var(--green); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
 .like__visual .soft{ fill:#C8D8CC; }
 .like__visual .deep{ fill:var(--green); }
@@ -427,6 +445,7 @@ a.svc__name:hover::after, a.svc__name:focus-visible::after{ opacity:1; }
   .hero__inner{ display:contents; }
   .hero__top{ grid-column:1 / -1; margin-bottom:4px; align-self:start; }
   .photo-frame{ grid-column:1; grid-row:2 / span 4; }
+  .photo-main{ max-height:440px; }
   .role{ grid-column:2; grid-row:2; justify-self:start; align-self:end; margin-bottom:8px; }
   .hero__body{ grid-column:2; grid-row:3; max-width:650px; }
   .hero__catch{ grid-column:2; grid-row:4; align-self:center; margin:22px 0; }
@@ -458,7 +477,17 @@ a.svc__name:hover::after, a.svc__name:focus-visible::after{ opacity:1; }
   /* 文章量に合わせた2列の流れにして、段差由来の空白をなくす */
   .likes{ grid-template-columns:minmax(0,7fr) minmax(0,5fr); align-items:start; }
   .likes__column{ display:grid; gap:14px; align-content:start; }
-  .like__visual{ height:144px; }
+  .like__visual:not(.is-photo){ height:144px; }
+
+  /* 縦長写真は横組みへ。写真と本文の2要素だけの1行にする */
+  .like--tall{
+    padding:0; display:grid; grid-template-columns:minmax(0,44%) minmax(0,1fr);
+    align-items:center;
+  }
+  .like--tall .like__visual{
+    margin:0; border-bottom:none; border-right:1px solid var(--line);
+  }
+  .like--tall .like__text{ padding:20px; }
   .seeds ul{
     display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
     gap:4px 30px; line-height:1.8;
